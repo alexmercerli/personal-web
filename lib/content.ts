@@ -69,7 +69,6 @@ export const content = {
           title: "Film Picks",
           description: "三部我会推荐的电影",
           items: ["星际穿越", "楚门的世界", "三峡好人"],
-          images: [{ src: "/images/beyond-work/film-placeholder.svg", alt: "电影推荐占位图" }]
           images: [{ src: "/images/beyond-work/film-placeholder.jpg", alt: "电影推荐占位图" }]
         },
         {
@@ -261,7 +260,6 @@ export const content = {
           title: "Book Picks",
           description: "Three books that stay on my shelf",
           items: ["The Hitchhiker's Guide to the Galaxy", "The Courage to Be Disliked", "Nonviolent Communication"],
-          images: [{ src: "/images/beyond-work/books-placeholder.jpgjpg", alt: "Book recommendations placeholder" }]
           images: [{ src: "/images/beyond-work/books-placeholder.jpg", alt: "Book recommendations placeholder" }]
         },
         {
