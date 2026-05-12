@@ -52,6 +52,7 @@ export const content = {
       text: "我是李奕成，一名从磁共振精密制造现场成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
       tags: ["工艺工程师", "自动化测试实践者", "工业 AI 实践者", "AI Agent Workflow Builder", "AI 产品经理","FDE 前沿部署工程师"]
     },
+    beyondWork: {
       title: "Beyond Work / 工作之外",
       eyebrow: "Personal Layer",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我保持对电影、小说、徒步和科幻的长期输入，它们让我在工程与产品之外继续观察世界。",
