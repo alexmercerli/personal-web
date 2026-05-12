@@ -43,14 +43,17 @@ public/images/beyond-work/
 建议直接用同名文件替换，路径就不用改：
 
 ```text
-life-photo.svg              生活照
-hiking-01.svg               徒步照片 1
-hiking-02.svg               徒步照片 2
-hiking-03.svg               徒步照片 3
-ocisly-placeholder.svg      科幻预览图
+life-photo.jpg              生活照
+film-placeholder.svg        电影推荐图
+books-placeholder.svg       书籍推荐图
+hiking-01.jpg               徒步照片 1
+hiking-02.jpg               徒步照片 2
+hiking-03.jpg               徒步照片 3
+ship.jpg                    科幻预览图
 ```
 
 如果你想用 `.jpg` 或 `.png`，把图片放进同一个文件夹，然后在 `lib/content.ts` 的 `beyondWork` 里修改对应 `src`。
+注意文件名大小写要和 `src` 完全一致，Vercel 部署环境会区分 `.jpg` 和 `.JPG`。
 
 ## 发布前 TODO
 

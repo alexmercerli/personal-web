@@ -26,7 +26,6 @@ type BeyondWorkProps = {
     quoteLabel: string;
     quote: string;
     portrait: BeyondWorkImage;
-    replaceHint: string;
     interests: readonly BeyondWorkInterest[];
   };
 };
@@ -48,7 +47,6 @@ export function BeyondWork({ content }: BeyondWorkProps) {
       <div className="beyond-work-grid">
         <figure className="beyond-portrait">
           <Image src={content.portrait.src} alt={content.portrait.alt} width={960} height={1200} unoptimized />
-          <figcaption>{content.replaceHint}</figcaption>
         </figure>
 
         <div className="beyond-copy">

@@ -57,46 +57,50 @@ export const content = {
       eyebrow: "Personal Layer",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我保持对电影、小说、徒步和科幻的长期输入，它们让我在工程与产品之外继续观察世界。",
       quoteLabel: "最近喜欢的一句话",
+      text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我喜欢看电影、小说、徒步，也是一个科幻和音乐爱好者。我相信把点连成面的力量，做自己的长期主义者。",
+      quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
       portrait: {
         src: "/images/beyond-work/life-photo.svg",
+        src: "/images/beyond-work/life-photo.jpg",
         alt: "生活照占位图"
       },
-      replaceHint: "替换为你的生活照",
       interests: [
         {
           key: "film",
           label: "电影",
           title: "Film Picks",
           description: "三部我会推荐的电影",
-          items: ["星际穿越", "楚门的世界", "三峡好人"]
+          items: ["星际穿越", "楚门的世界", "三峡好人"],
+          images: [{ src: "/images/beyond-work/film-placeholder.svg", alt: "电影推荐占位图" }]
         },
         {
           key: "books",
           label: "小说",
           title: "Book Picks",
           description: "三本长期留在我阅读清单里的书",
-          items: ["银河系漫游指南", "被讨厌的勇气", "非暴力沟通"]
+          items: ["银河系漫游指南", "被讨厌的勇气", "非暴力沟通"],
+          images: [{ src: "/images/beyond-work/books-placeholder.jpg", alt: "书籍推荐占位图" }]
         },
         {
           key: "hiking",
           label: "徒步",
-          title: "Trail Notes",
-          description: "在长路径里重新校准节奏",
-          items: ["把目标拆成可抵达的下一步", "在户外保持观察力", "用照片记录路上的状态"],
+          title: "Notes",
+          description: "在徒步里体会自然",
+          items: ["保持好的身体状态", "保持对自然的热爱", "把点连成线"],
           images: [
-            { src: "/images/beyond-work/hiking-01.svg", alt: "徒步照片占位图 1" },
-            { src: "/images/beyond-work/hiking-02.svg", alt: "徒步照片占位图 2" },
-            { src: "/images/beyond-work/hiking-03.svg", alt: "徒步照片占位图 3" }
+            { src: "/images/beyond-work/hiking-01.jpg", alt: "徒步照片占位图 1" },
+            { src: "/images/beyond-work/hiking-02.jpg", alt: "徒步照片占位图 2" },
+            { src: "/images/beyond-work/hiking-03.jpg", alt: "徒步照片占位图 3" }
           ]
         },
         {
           key: "scifi",
           label: "科幻",
-          title: "Sci-fi Signal",
+          title: "科幻小说和电影爱好者",
           description: "Of Course I Still Love You",
-          items: ["工程想象力", "长期主义", "可重复使用的系统"],
-          images: [{ src: "/images/beyond-work/ocisly-placeholder.svg", alt: "Of Course I Still Love You 占位图" }]
+          items: ["想象力", "创造力", "理性浪漫主义"],
+          images: [{ src: "/images/beyond-work/ship.jpg", alt: "Of Course I Still Love You 占位图" }]
         }
       ]
     },
@@ -237,48 +241,49 @@ export const content = {
     beyondWork: {
       title: "Beyond Work / Personal Layer",
       eyebrow: "Personal Layer",
-      text: "I am curious across domains, happy to share, and high-energy in how I work and live. Beyond work, films, books, hiking, and sci-fi keep my observation and narrative sense alive.",
+      text: "I’m a person with diverse interests who loves to share and is full of energy. Outside of work, I enjoy watching movies, reading novels, and hiking, and I’m also a fan of science fiction and music. I believe in the power of connecting the dots and am committed to a long-term perspective.",
       quoteLabel: "Recent quote",
       quote: "Showing up is 80 percent of success.",
       portrait: {
-        src: "/images/beyond-work/life-photo.svg",
+        src: "/images/beyond-work/life-photo.jpg",
         alt: "Life photo placeholder"
       },
-      replaceHint: "Replace with your life photo",
       interests: [
         {
           key: "film",
           label: "Film",
           title: "Film Picks",
           description: "Three films I would recommend",
-          items: ["Interstellar", "The Truman Show", "Still Life"]
+          items: ["Interstellar", "The Truman Show", "Still Life"],
+          images: [{ src: "/images/beyond-work/film-placeholder.jpg", alt: "Film recommendations placeholder" }]
         },
         {
           key: "books",
           label: "Books",
           title: "Book Picks",
           description: "Three books that stay on my shelf",
-          items: ["The Hitchhiker's Guide to the Galaxy", "The Courage to Be Disliked", "Nonviolent Communication"]
+          items: ["The Hitchhiker's Guide to the Galaxy", "The Courage to Be Disliked", "Nonviolent Communication"],
+          images: [{ src: "/images/beyond-work/books-placeholder.jpgjpg", alt: "Book recommendations placeholder" }]
         },
         {
           key: "hiking",
           label: "Hiking",
           title: "Trail Notes",
-          description: "Recalibrating pace on long paths",
-          items: ["Break long goals into reachable steps", "Stay observant outdoors", "Keep a visual record of the route"],
+          description: "Experience nature on a hike",
+          items: ["Keep Healthy", "Observing Nature", "Connect the dots"],
           images: [
-            { src: "/images/beyond-work/hiking-01.svg", alt: "Hiking photo placeholder 1" },
-            { src: "/images/beyond-work/hiking-02.svg", alt: "Hiking photo placeholder 2" },
-            { src: "/images/beyond-work/hiking-03.svg", alt: "Hiking photo placeholder 3" }
+            { src: "/images/beyond-work/hiking-01.jpg", alt: "Hiking photo placeholder 1" },
+            { src: "/images/beyond-work/hiking-02.jpg", alt: "Hiking photo placeholder 2" },
+            { src: "/images/beyond-work/hiking-03.jpg", alt: "Hiking photo placeholder 3" }
           ]
         },
         {
           key: "scifi",
           label: "Sci-fi",
-          title: "Sci-fi Signal",
+          title: "Loves science fiction novels and movies",
           description: "Of Course I Still Love You",
-          items: ["Engineering imagination", "Long-term thinking", "Reusable systems"],
-          images: [{ src: "/images/beyond-work/ocisly-placeholder.svg", alt: "Of Course I Still Love You placeholder" }]
+          items: ["Imagination", "Creativity", "Rational Romanticism"],
+          images: [{ src: "/images/beyond-work/ship.jpg", alt: "Of Course I Still Love You placeholder" }]
         }
       ]
     },

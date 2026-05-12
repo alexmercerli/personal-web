@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Film recommendations placeholder</title>
+  <desc id="desc">A quiet cinema-inspired placeholder image for film recommendations.</desc>
+  <defs>
+    <linearGradient id="filmBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1d2b36"/>
+      <stop offset="62%" stop-color="#6e9db4"/>
+      <stop offset="100%" stop-color="#fffdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#filmBg)"/>
+  <rect x="170" y="150" width="860" height="460" rx="18" fill="#fffdf8" opacity=".88"/>
+  <rect x="218" y="198" width="764" height="330" rx="8" fill="#1d2b36" opacity=".92"/>
+  <circle cx="600" cy="364" r="76" fill="#d9965f" opacity=".9"/>
+  <path d="M568 318v92l82-46z" fill="#fffdf8"/>
+  <path d="M236 566h728" stroke="#6e9db4" stroke-width="10" stroke-linecap="round" opacity=".48"/>
+  <text x="600" y="682" text-anchor="middle" fill="#fffdf8" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">Film placeholder</text>
+</svg>

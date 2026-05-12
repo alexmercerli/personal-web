@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Book recommendations placeholder</title>
+  <desc id="desc">A calm books and notes placeholder image for reading recommendations.</desc>
+  <rect width="1200" height="760" fill="#f7f5f0"/>
+  <path d="M0 560c166-64 322-86 468-66 128 18 234 66 364 54 112-10 218-62 368-84v296H0z" fill="#d9e9ee"/>
+  <rect x="240" y="184" width="208" height="364" rx="10" fill="#1d2b36" opacity=".88"/>
+  <rect x="472" y="142" width="208" height="406" rx="10" fill="#6e9db4" opacity=".86"/>
+  <rect x="704" y="220" width="208" height="328" rx="10" fill="#d9965f" opacity=".84"/>
+  <path d="M284 260h120M516 226h120M748 294h120" stroke="#fffdf8" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M284 312h92M516 282h92M748 346h92" stroke="#fffdf8" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  <text x="600" y="668" text-anchor="middle" fill="#1d2b36" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">Books placeholder</text>
+</svg>
