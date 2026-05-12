@@ -55,13 +55,10 @@ export const content = {
     beyondWork: {
       title: "Beyond Work / 工作之外",
       eyebrow: "Personal Layer",
-      text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我保持对电影、小说、徒步和科幻的长期输入，它们让我在工程与产品之外继续观察世界。",
-      quoteLabel: "最近喜欢的一句话",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我喜欢看电影、小说、徒步，也是一个科幻和音乐爱好者。我相信把点连成面的力量，做自己的长期主义者。",
       quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
       portrait: {
-        src: "/images/beyond-work/life-photo.svg",
         src: "/images/beyond-work/life-photo.jpg",
         alt: "生活照占位图"
       },
@@ -73,6 +70,7 @@ export const content = {
           description: "三部我会推荐的电影",
           items: ["星际穿越", "楚门的世界", "三峡好人"],
           images: [{ src: "/images/beyond-work/film-placeholder.svg", alt: "电影推荐占位图" }]
+          images: [{ src: "/images/beyond-work/film-placeholder.jpg", alt: "电影推荐占位图" }]
         },
         {
           key: "books",
@@ -264,6 +262,7 @@ export const content = {
           description: "Three books that stay on my shelf",
           items: ["The Hitchhiker's Guide to the Galaxy", "The Courage to Be Disliked", "Nonviolent Communication"],
           images: [{ src: "/images/beyond-work/books-placeholder.jpgjpg", alt: "Book recommendations placeholder" }]
+          images: [{ src: "/images/beyond-work/books-placeholder.jpg", alt: "Book recommendations placeholder" }]
         },
         {
           key: "hiking",
