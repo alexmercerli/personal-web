@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Of Course I Still Love You placeholder</title>
+  <desc id="desc">A stylized autonomous spaceport drone ship placeholder image.</desc>
+  <defs>
+    <linearGradient id="space" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#172432"/>
+      <stop offset="64%" stop-color="#6e9db4"/>
+      <stop offset="100%" stop-color="#f7f5f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#space)"/>
+  <circle cx="944" cy="154" r="52" fill="#fffdf8" opacity=".78"/>
+  <path d="M0 548c120-20 232-29 336-27 178 4 286 42 452 42 140 0 254-28 412-62v259H0z" fill="#fffdf8" opacity=".3"/>
+  <path d="M238 490h724l-82 96H320z" fill="#1d2b36" opacity=".9"/>
+  <path d="M360 458h480l122 32H238z" fill="#fffdf8" opacity=".72"/>
+  <path d="M584 200h34v258h-34z" fill="#fffdf8" opacity=".86"/>
+  <path d="M552 202h98l-20-74h-58z" fill="#fffdf8" opacity=".86"/>
+  <path d="M503 458c42-52 58-108 48-168M697 458c-42-52-58-108-48-168" stroke="#d9965f" stroke-width="8" fill="none" stroke-linecap="round" opacity=".86"/>
+  <text x="600" y="648" text-anchor="middle" fill="#fffdf8" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">OF COURSE I STILL LOVE YOU</text>
+</svg>

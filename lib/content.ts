@@ -52,6 +52,53 @@ export const content = {
       text: "我是李奕成，一名从磁共振精密制造现场成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
       tags: ["工艺工程师", "自动化测试实践者", "工业 AI 实践者", "AI Agent Workflow Builder", "AI 产品经理","FDE 前沿部署工程师"]
     },
+      title: "Beyond Work / 工作之外",
+      eyebrow: "Personal Layer",
+      text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我保持对电影、小说、徒步和科幻的长期输入，它们让我在工程与产品之外继续观察世界。",
+      quoteLabel: "最近喜欢的一句话",
+      quote: "到场是成功的八成。",
+      portrait: {
+        src: "/images/beyond-work/life-photo.svg",
+        alt: "生活照占位图"
+      },
+      replaceHint: "替换为你的生活照",
+      interests: [
+        {
+          key: "film",
+          label: "电影",
+          title: "Film Picks",
+          description: "三部我会推荐的电影",
+          items: ["星际穿越", "楚门的世界", "三峡好人"]
+        },
+        {
+          key: "books",
+          label: "小说",
+          title: "Book Picks",
+          description: "三本长期留在我阅读清单里的书",
+          items: ["银河系漫游指南", "被讨厌的勇气", "非暴力沟通"]
+        },
+        {
+          key: "hiking",
+          label: "徒步",
+          title: "Trail Notes",
+          description: "在长路径里重新校准节奏",
+          items: ["把目标拆成可抵达的下一步", "在户外保持观察力", "用照片记录路上的状态"],
+          images: [
+            { src: "/images/beyond-work/hiking-01.svg", alt: "徒步照片占位图 1" },
+            { src: "/images/beyond-work/hiking-02.svg", alt: "徒步照片占位图 2" },
+            { src: "/images/beyond-work/hiking-03.svg", alt: "徒步照片占位图 3" }
+          ]
+        },
+        {
+          key: "scifi",
+          label: "科幻",
+          title: "Sci-fi Signal",
+          description: "Of Course I Still Love You",
+          items: ["工程想象力", "长期主义", "可重复使用的系统"],
+          images: [{ src: "/images/beyond-work/ocisly-placeholder.svg", alt: "Of Course I Still Love You 占位图" }]
+        }
+      ]
+    },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
       text: "我的工程经验来自真实制造现场一线：量产产线工艺问题、设备异常、质量闭环、物料问题、新产品导入和供应商协作。这些经历让我理解，AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果。同时，在西门子医疗的四年经历磨练了我的一线经验和靠谱素养",
@@ -186,6 +233,54 @@ export const content = {
       text: "I am Yicheng Li, also known as Mercer — a process and automation engineer with hands-on experience in medical device(MRI) manufacturing. My current focus is industrial AI, AI product thinking, and AI-enabled manufacturing project delivery.",
       tags: ["Process Engineer", "Automation Testing Practitioner", "Industrial AI Practitioner", "AI Agent Workflow Builder", "AI Product Manager Candidate"]
     },
+    beyondWork: {
+      title: "Beyond Work / Personal Layer",
+      eyebrow: "Personal Layer",
+      text: "I am curious across domains, happy to share, and high-energy in how I work and live. Beyond work, films, books, hiking, and sci-fi keep my observation and narrative sense alive.",
+      quoteLabel: "Recent quote",
+      quote: "Showing up is 80 percent of success.",
+      portrait: {
+        src: "/images/beyond-work/life-photo.svg",
+        alt: "Life photo placeholder"
+      },
+      replaceHint: "Replace with your life photo",
+      interests: [
+        {
+          key: "film",
+          label: "Film",
+          title: "Film Picks",
+          description: "Three films I would recommend",
+          items: ["Interstellar", "The Truman Show", "Still Life"]
+        },
+        {
+          key: "books",
+          label: "Books",
+          title: "Book Picks",
+          description: "Three books that stay on my shelf",
+          items: ["The Hitchhiker's Guide to the Galaxy", "The Courage to Be Disliked", "Nonviolent Communication"]
+        },
+        {
+          key: "hiking",
+          label: "Hiking",
+          title: "Trail Notes",
+          description: "Recalibrating pace on long paths",
+          items: ["Break long goals into reachable steps", "Stay observant outdoors", "Keep a visual record of the route"],
+          images: [
+            { src: "/images/beyond-work/hiking-01.svg", alt: "Hiking photo placeholder 1" },
+            { src: "/images/beyond-work/hiking-02.svg", alt: "Hiking photo placeholder 2" },
+            { src: "/images/beyond-work/hiking-03.svg", alt: "Hiking photo placeholder 3" }
+          ]
+        },
+        {
+          key: "scifi",
+          label: "Sci-fi",
+          title: "Sci-fi Signal",
+          description: "Of Course I Still Love You",
+          items: ["Engineering imagination", "Long-term thinking", "Reusable systems"],
+          images: [{ src: "/images/beyond-work/ocisly-placeholder.svg", alt: "Of Course I Still Love You placeholder" }]
+        }
+      ]
+    },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
       text: "My engineering foundation comes from real manufacturing environments: production lines, process issues, equipment validation, quality control, material localization, and supplier collaboration. This background shapes how I evaluate industrial AI — by measurable outcomes, not concepts alone.",
@@ -261,7 +356,6 @@ export const content = {
     career: {
       title: "Career Direction / 职业方向",
       text: "My next step is to move from process engineering and automation practice toward AI product management and industrial AI project delivery. I am interested in AI solutions that enter real workflows, improve quality, increase efficiency, reduce risk, and are actually used by frontline teams.",
-      roles: ["AI Product Manager", "Industrial AI Project Manager", "Manufacturing Digitalization PM", "Automation / AI Solution Engineer"]
       roles: ["AI Product Manager", "Industrial AI Project Manager", "Manufacturing Digitalization PM", "Automation / AI Solution Engineer","FDE"]
     },
     contact: {

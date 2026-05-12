@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { BeyondWork } from "@/components/BeyondWork";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { content, type Locale } from "@/lib/content";
@@ -60,6 +61,8 @@ export default async function LocalePage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        <BeyondWork content={t.beyondWork} />
 
         <section className="split-section">
           <article className="studio-section" id="ground">
