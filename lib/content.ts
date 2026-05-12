@@ -4,6 +4,7 @@ export const content = {
   zh: {
     brand: {
       name: "李奕成 Mercer",
+      subtitle: "AI Portfolio"
     },
     nav: {
       portfolio: "Portfolio",
@@ -18,9 +19,14 @@ export const content = {
     },
     hero: {
       eyebrow: "Personal Knowledge Studio",
+      titleLines: ["李奕成 Mercer", "个人主页"],
+      titleAlt: "Yicheng Li / Mercer — AI Portfolio",
+      lead: "从磁共振精密制造现场出发，连接工艺、生产、自动化测试、机器视觉与 AI 驱动业务。",
+      body: "我正在寻求向AI 产品经理或制造业 AI 项目经理方向转型，关注 AI 如何提高生产力、改善质量并赋能业务。",
       primary: "查看作品集",
       secondary: "下载简历",
       tertiary: "联系我",
+      planetTitle: "Knowledge Planet",
       directionLabel: "Current Direction",
       planetNote: "连接制造现场、AI 工具和产品落地，面向可验证、可交付、可使用的工业 AI 实践。"
     },
@@ -43,19 +49,24 @@ export const content = {
     },
     about: {
       title: "About / Identity",
+      text: "我是李奕成，一名从磁共振精密制造现场成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
+      tags: ["工艺工程师", "自动化测试实践者", "工业 AI 实践者", "AI Agent Workflow Builder", "AI 产品经理","FDE 前沿部署工程师"]
     },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
+      text: "我的工程经验来自真实制造现场一线：量产产线工艺问题、设备异常、质量闭环、物料问题、新产品导入和供应商协作。这些经历让我理解，AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果。同时，在西门子医疗的四年经历磨练了我的一线经验和靠谱素养",
       items: [
         "西门子医疗磁共振事业部工艺工程师",
         "管理 5 款量产产线中的工艺、设备、质量、物料问题",
         "2025 年负责产品合格率达到 99.8% 以上",
         "磁共振子部件工艺开发 / 新产品导入",
         "大型磁场测试系统导入、安装和验证",
+        "先进设备/精密产品制造及验证 know-how"
       ]
     },
     data: {
       title: "Automation & Data / 自动化与数据",
+      text: "我关注如何把制造过程中的数据变成可操作的判断：从自动化测试，到风险预警，再到质量改善。对我来说，数据不是报表，而是机器学习模型的输入。",
       items: ["自动化测试解决方案", "LabVIEW / Python / MATLAB", "历史过程工艺数据", "测试结果与不良记录", "XGBoost 不良风险预警模型", "约 CNY 400K / 年成本节省"]
     },
     projectsTitle: "Industrial AI Projects / 工业 AI 项目",
@@ -68,6 +79,8 @@ export const content = {
     },
     projects: [
       {
+        title: "基于Labview的自动化测试平台",
+        context: "赋能医疗器械制造过程中的测试效率提升90%，识别质量风险",
         role: "自动化方案设计与实现",
         approach: "结合历史工艺数据、测试结果和不良记录，构建基于 XGBoost 的风险预警模型。",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
@@ -113,6 +126,8 @@ export const content = {
     ],
     career: {
       title: "Career Direction / 职业方向",
+      text: "我的下一阶段目标，是从工艺工程与自动化实践，走向 AI 产品经理或制造业 AI 项目经理。我希望参与那些真正进入业务流程的 AI 项目：能改善质量、提升效率、降低风险，并被一线团队实际使用。",
+      roles: ["AI 产品经理", "制造业 AI 项目经理", "工业数字化项目经理", "自动化 / AI 解决方案工程师","FDE 前沿部署工程师"]
     },
     contact: {
       title: "Contact / 联系方式",
@@ -123,6 +138,7 @@ export const content = {
   en: {
     brand: {
       name: "Yicheng Li / Mercer",
+      subtitle: "AI Portfolio"
     },
     nav: {
       portfolio: "Portfolio",
@@ -137,9 +153,14 @@ export const content = {
     },
     hero: {
       eyebrow: "Personal Knowledge Studio",
+      titleLines: ["Yicheng Li / Mercer", "AI Portfolio"],
+      titleAlt: "李奕成｜AI 作品集",
+      lead: "From medical device manufacturing to AI project thinking.",
+      body: "I connect process, manufacturing, automation testing, machine vision, and AI workflows to explore how AI can be applied in real manufacturing systems.",
       primary: "View Portfolio",
       secondary: "Download Resume",
       tertiary: "Contact",
+      planetTitle: "AI Knowledge Planet",
       directionLabel: "Current Direction",
       planetNote: "Connecting manufacturing practice, AI tools, and product delivery for verifiable, shippable, usable industrial AI."
     },
@@ -162,6 +183,7 @@ export const content = {
     },
     about: {
       title: "About / Identity",
+      text: "I am Yicheng Li, also known as Mercer — a process and automation engineer with hands-on experience in medical device(MRI) manufacturing. My current focus is industrial AI, AI product thinking, and AI-enabled manufacturing project delivery.",
       tags: ["Process Engineer", "Automation Testing Practitioner", "Industrial AI Practitioner", "AI Agent Workflow Builder", "AI Product Manager Candidate"]
     },
     ground: {
@@ -191,6 +213,8 @@ export const content = {
     },
     projects: [
       {
+        title: "LabVIEW-Based One-button Test Platform",
+        context: "Enables a 90% increase in testing efficiency during medical device manufacturing and identifies quality risks",
         role: "Solution design and implementation",
         approach: "Built an automated testing solution and developed an XGBoost-based risk prediction model using historical process data, test results, and defect records.",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
@@ -238,6 +262,7 @@ export const content = {
       title: "Career Direction / 职业方向",
       text: "My next step is to move from process engineering and automation practice toward AI product management and industrial AI project delivery. I am interested in AI solutions that enter real workflows, improve quality, increase efficiency, reduce risk, and are actually used by frontline teams.",
       roles: ["AI Product Manager", "Industrial AI Project Manager", "Manufacturing Digitalization PM", "Automation / AI Solution Engineer"]
+      roles: ["AI Product Manager", "Industrial AI Project Manager", "Manufacturing Digitalization PM", "Automation / AI Solution Engineer","FDE"]
     },
     contact: {
       title: "Contact / 联系方式",
