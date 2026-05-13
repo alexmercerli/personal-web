@@ -570,10 +570,17 @@ li {
   grid-template-columns: minmax(0, 0.82fr) minmax(240px, 0.72fr);
   gap: 20px;
   align-items: stretch;
+  min-width: 0;
+  overflow: hidden;
   margin-top: 22px;
   padding-top: 22px;
   border-top: 1px solid var(--line);
   animation: preview-in 220ms ease both;
+}
+
+.interest-preview-copy,
+.interest-images {
+  min-width: 0;
 }
 
 .interest-preview-copy p {
@@ -624,6 +631,7 @@ li {
   display: grid;
   gap: 8px;
   min-height: 220px;
+  width: 100%;
 }
 
 .interest-images img {
@@ -639,6 +647,7 @@ li {
 
 .interest-images.count-1 {
   grid-template-columns: 1fr;
+  aspect-ratio: 16 / 10;
 }
 
 .interest-images.count-3 {
@@ -714,6 +723,31 @@ li {
   height: 7px;
   border-radius: 50%;
   background: var(--orange);
+}
+
+.organization-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0 20px;
+  padding: 14px 16px;
+  border: 1px solid rgba(110, 157, 180, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.organization-strip img {
+  width: min(250px, 54%);
+  max-height: 56px;
+  object-fit: contain;
+}
+
+.organization-strip span {
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.58;
 }
 
 .projects-grid {
@@ -803,8 +837,37 @@ dd {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 24px;
+  align-items: center;
   padding: 18px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.timeline-school {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.timeline article.has-logo .timeline-school {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  width: 100%;
+}
+
+.timeline-school h3 {
+  min-width: 0;
+}
+
+.school-logo {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  padding: 6px;
+  border: 1px solid rgba(110, 157, 180, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.78);
+  object-fit: contain;
 }
 
 .career-section,
@@ -879,11 +942,30 @@ dd {
   .hero-section,
   .identity-section,
   .beyond-work-grid,
-  .interest-preview,
   .split-section,
   .lab-section,
   .timeline article {
     grid-template-columns: 1fr;
+  }
+
+  .interest-preview {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .interest-images.count-1 {
+    min-height: clamp(190px, 48vw, 320px);
+  }
+
+  .timeline article.has-logo .timeline-school {
+    display: flex;
+    width: auto;
+  }
+
+  .education-section-en .timeline article.has-logo .timeline-school {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    width: min(220px, 100%);
   }
 
   .hero-section {
@@ -961,9 +1043,33 @@ dd {
   .interest-images.count-3 {
     grid-template-columns: 1fr;
     grid-template-rows: none;
+    min-height: 0;
   }
 
   .interest-images.count-3 img:first-child {
     grid-row: auto;
+  }
+
+  .interest-images.count-3 img {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .organization-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .organization-strip img {
+    width: min(250px, 100%);
+  }
+
+  .timeline-school {
+    justify-content: flex-start;
+  }
+
+  .school-logo {
+    width: 46px;
+    height: 46px;
   }
 }

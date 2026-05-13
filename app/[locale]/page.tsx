@@ -6,8 +6,28 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { content, type Locale } from "@/lib/content";
 import { planetTags } from "@/lib/planetTags";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 const locales: Locale[] = ["zh", "en"];
+
+const educationLogos = {
+  清华大学: {
+    src: "/images/logos/tsinghua-university.png",
+    alt: "清华大学校徽"
+  },
+  "Tsinghua University": {
+    src: "/images/logos/tsinghua-university.png",
+    alt: "Tsinghua University logo"
+  },
+  深圳大学: {
+    src: "/images/logos/shenzhen-university.svg",
+    alt: "深圳大学校徽"
+  },
+  "Shenzhen University": {
+    src: "/images/logos/shenzhen-university.svg",
+    alt: "Shenzhen University logo"
+  }
+} as const;
 
 function resolveLocale(locale: string): Locale {
   return locales.includes(locale as Locale) ? (locale as Locale) : "zh";
@@ -67,6 +87,16 @@ export default async function LocalePage({ params }: PageProps) {
         <section className="split-section">
           <article className="studio-section" id="ground">
             <SectionHeading title={t.ground.title} eyebrow={t.sectionEyebrows.ground} />
+            <div className="organization-strip">
+              <Image
+                src="/images/logos/siemens-healthineers.png"
+                alt="Siemens Healthineers logo"
+                width={450}
+                height={112}
+                unoptimized
+              />
+              <span>西门子医疗</span>
+            </div>
             <p>{t.ground.text}</p>
             <ul className="check-list">
               {t.ground.items.map((item) => (
@@ -119,15 +149,24 @@ export default async function LocalePage({ params }: PageProps) {
           </article>
         </section>
 
-        <section className="studio-section education-section">
+        <section className={`studio-section education-section education-section-${lang}`}>
           <SectionHeading title={t.educationTitle} eyebrow={t.sectionEyebrows.education} />
           <div className="timeline">
-            {t.education.map(([school, detail]) => (
-              <article key={school}>
-                <h3>{school}</h3>
-                <p>{detail}</p>
-              </article>
-            ))}
+            {t.education.map(([school, detail]) => {
+              const logo = educationLogos[school as keyof typeof educationLogos];
+
+              return (
+                <article className={logo ? "has-logo" : undefined} key={school}>
+                  <div className="timeline-school">
+                    <h3>{school}</h3>
+                    {logo ? (
+                      <Image className="school-logo" src={logo.src} alt={logo.alt} width={72} height={72} unoptimized />
+                    ) : null}
+                  </div>
+                  <p>{detail}</p>
+                </article>
+              );
+            })}
           </div>
         </section>
 
