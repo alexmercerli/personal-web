@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { BeyondWork } from "@/components/BeyondWork";
+import { ContactActions } from "@/components/ContactActions";
 import { ProjectCard } from "@/components/ProjectCard";
 import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -204,20 +205,7 @@ export default async function LocalePage({ params }: PageProps) {
           <p>
             <RichText text={t.contact.text} />
           </p>
-          <div className="action-row center">
-            <a className="dark-button" href={t.links.resume}>
-              {t.contact.buttons[0]}
-            </a>
-            <a className="soft-button" href={t.links.email}>
-              {t.contact.buttons[1]}
-            </a>
-            <a className="soft-button" href={t.links.linkedin}>
-              {t.contact.buttons[2]}
-            </a>
-            <a className="soft-button" href={t.links.github}>
-              {t.contact.buttons[3]}
-            </a>
-          </div>
+          <ContactActions labels={t.contact.buttons} links={t.links} dialog={t.contact.emailDialog} />
         </section>
       </main>
     </>

@@ -129,8 +129,10 @@ export function KnowledgePlanet({ tags }: KnowledgePlanetProps) {
 
     const compact = window.matchMedia("(max-width: 680px)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const shouldAnimate = !compact && !reducedMotion;
-    const textureSize = compact ? 512 : 1024;
+    const shouldAnimate = !reducedMotion;
+    const rotationSpeed = compact ? 0.0008 : 0.0016;
+    const cloudRotationSpeed = compact ? 0.0004 : 0.0008;
+    const textureSize = 1024;
     const segmentCount = compact ? 64 : 96;
 
     const scene = new THREE.Scene();
@@ -143,7 +145,7 @@ export function KnowledgePlanet({ tags }: KnowledgePlanetProps) {
       antialias: !compact,
       powerPreference: "low-power"
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, compact ? 1 : 1.6));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, compact ? 1.5 : 1.6));
     renderer.setSize(host.clientWidth, host.clientHeight);
     renderer.domElement.setAttribute("aria-hidden", "true");
     host.appendChild(renderer.domElement);
@@ -254,8 +256,8 @@ export function KnowledgePlanet({ tags }: KnowledgePlanetProps) {
 
       frame = requestAnimationFrame(animate);
       if (!dragging) {
-        group.rotation.y += 0.0016;
-        clouds.rotation.y += 0.0008;
+        group.rotation.y += rotationSpeed;
+        clouds.rotation.y += cloudRotationSpeed;
         group.rotation.x = 0.06 + Math.sin(Date.now() * 0.00026) * 0.035;
       }
       renderScene();

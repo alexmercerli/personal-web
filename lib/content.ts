@@ -1,5 +1,12 @@
 export type Locale = "zh" | "en";
 
+const sharedLinks = {
+  resume: "/resume.pdf",
+  email: "13717322326@163.com",
+  linkedin: "#TODO-linkedin",
+  github: "#TODO-github"
+} as const;
+
 export const content = {
   zh: {
     brand: {
@@ -22,7 +29,7 @@ export const content = {
       titleLines: ["李奕成 Mercer", "个人主页"],
       titleAlt: "Yicheng Li / Mercer — AI Portfolio",
       lead: "从磁共振精密制造现场出发，连接工艺、生产、自动化测试、机器视觉与 AI 驱动业务。",
-      body: "我正在寻求向AI 产品经理或制造业 AI 项目经理方向转型，关注 AI 如何提高生产力、改善质量并赋能业务。",
+      body: "**我正在寻求向AI 产品经理，AI 项目经理方向转型，关注 AI 如何提高生产力、改善质量并赋能业务。**",
       primary: "查看作品集",
       secondary: "下载简历",
       tertiary: "联系我",
@@ -30,12 +37,7 @@ export const content = {
       directionLabel: "Current Direction",
       planetNote: "连接制造现场、AI 工具和产品落地，面向可验证、可交付、可使用的工业 AI 实践。"
     },
-    links: {
-      resume: "/resume.pdf",
-      email: "#TODO-email",
-      linkedin: "#TODO-linkedin",
-      github: "#TODO-github"
-    },
+    links: sharedLinks,
     sectionEyebrows: {
       about: "01 / Positioning",
       education: "02 / Education",
@@ -48,9 +50,9 @@ export const content = {
       contact: "10 / Contact"
     },
     about: {
-      title: "About / Identity",
-      text: "我是李奕成，一名从磁共振精密制造现场成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
-      tags: ["工艺工程师", "自动化测试实践者", "工业 AI 实践者", "AI Agent Workflow Builder", "AI 产品经理","FDE 前沿部署工程师"]
+      title: "About / 关于我",
+      text: "我是李奕成，一名从磁共振精密制造一线成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
+      tags: ["工艺工程师", "自动化工程师", "AI 实践者", "英语可作为工作语言", "逻辑思维能力","创造性"]
     },
     beyondWork: {
       title: "Beyond Work / 工作之外",
@@ -103,7 +105,7 @@ export const content = {
     },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
-      text: "我的工程经验来自真实制造现场一线：量产产线工艺问题、设备异常、质量闭环、物料问题、新产品导入和供应商协作。这些经历让我理解，AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果。同时，在西门子医疗的四年经历磨练了我的一线经验和靠谱素养",
+      text: "我的工程经验来自真实制造现场一线：新产品导入、工艺开发、troubleshooting 、设备故障、质量问题和供应商管理。这些经历让我理解，AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果。同时，在西门子医疗的四年经历磨练了我的一线经验和靠谱素养。",
       items: [
         "西门子医疗磁共振事业部工艺工程师",
         "管理 5 款量产产线中的工艺、设备、质量、物料问题",
@@ -181,7 +183,14 @@ export const content = {
     contact: {
       title: "Contact / 联系方式",
       text: "我正在寻找 AI 产品经理、制造业 AI 项目经理、工业数字化和自动化解决方案相关机会。如果你关注制造业 AI、医疗器械数字化、工业数据应用或 AI Agent 工作流，欢迎联系我。",
-      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"]
+      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"],
+      emailDialog: {
+        title: "Email",
+        hint: "请给我发送邮件，我会快速回复你。",
+        copy: "复制邮箱",
+        copied: "已复制",
+        close: "关闭"
+      }
     }
   },
   en: {
@@ -205,7 +214,7 @@ export const content = {
       titleLines: ["Yicheng Li / Mercer", "AI Portfolio"],
       titleAlt: "李奕成｜AI 作品集",
       lead: "From medical device manufacturing to AI project thinking.",
-      body: "I connect process, manufacturing, automation testing, machine vision, and AI workflows to explore how AI can be applied in real manufacturing systems.",
+      body: "**I am seeking to transition toward AI Product Manager and AI Project Manager roles, with a focus on how AI can improve productivity, quality, and business enablement.**",
       primary: "View Portfolio",
       secondary: "Download Resume",
       tertiary: "Contact",
@@ -213,12 +222,7 @@ export const content = {
       directionLabel: "Current Direction",
       planetNote: "Connecting manufacturing practice, AI tools, and product delivery for verifiable, shippable, usable industrial AI."
     },
-    links: {
-      resume: "/resume.pdf",
-      email: "#TODO-email",
-      linkedin: "#TODO-linkedin",
-      github: "#TODO-github"
-    },
+    links: sharedLinks,
     sectionEyebrows: {
       about: "01 / Positioning",
       education: "02 / Education",
@@ -231,9 +235,9 @@ export const content = {
       contact: "10 / Contact"
     },
     about: {
-      title: "About / Identity",
-      text: "I am Yicheng Li, also known as Mercer — a process and automation engineer with hands-on experience in medical device(MRI) manufacturing. My current focus is industrial AI, AI product thinking, and AI-enabled manufacturing project delivery.",
-      tags: ["Process Engineer", "Automation Testing Practitioner", "Industrial AI Practitioner", "AI Agent Workflow Builder", "AI Product Manager Candidate"]
+      title: "About / About Me",
+      text: "I am Yicheng Li, also known as Mercer — a process and automation engineer who grew from the front line of precision MRI manufacturing. My long-term direction is to combine manufacturing know-how, AI tool capabilities, and project management methods to drive AI implementation in real industrial scenarios.",
+      tags: ["Process Engineer", "Automation Engineer", "AI Practitioner", "English as a Working Language", "Logical Thinking", "Creativity"]
     },
     beyondWork: {
       title: "Beyond Work / Personal Layer",
@@ -286,7 +290,7 @@ export const content = {
     },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
-      text: "My engineering foundation comes from real manufacturing environments: production lines, process issues, equipment validation, quality control, material localization, and supplier collaboration. This background shapes how I evaluate industrial AI — by measurable outcomes, not concepts alone.",
+      text: "My engineering experience comes from the front line of real manufacturing environments: new product introduction, process development, troubleshooting, equipment failures, quality issues, and supplier management. These experiences helped me understand that the value of AI in manufacturing must return to efficiency, quality, stability, and deliverable results. At the same time, four years at Siemens Healthineers shaped my frontline experience and reliability as an engineer.",
       items: [
         "Process engineer in Siemens Healthineers MR business",
         "Handled process, equipment, quality, and material issues across 5 production lines",
@@ -364,7 +368,14 @@ export const content = {
     contact: {
       title: "Contact / 联系方式",
       text: "I am open to opportunities in AI product management, industrial AI project management, manufacturing digitalization, and automation solutions. I am especially interested in applying AI to real manufacturing workflows and medical device production systems.",
-      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"]
+      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"],
+      emailDialog: {
+        title: "Email",
+        hint: "Send me a Email and I will reply you soon.",
+        copy: "Copy Email",
+        copied: "Copied",
+        close: "Close"
+      }
     }
   }
 } as const;
