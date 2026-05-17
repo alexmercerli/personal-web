@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { BeyondWork } from "@/components/BeyondWork";
 import { ProjectCard } from "@/components/ProjectCard";
+import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
 import { content, type Locale } from "@/lib/content";
 import { planetTags } from "@/lib/planetTags";
@@ -73,7 +74,9 @@ export default async function LocalePage({ params }: PageProps) {
         <section className="studio-section identity-section" id="about">
           <SectionHeading title={t.about.title} eyebrow={t.sectionEyebrows.about} />
           <div>
-            <p>{t.about.text}</p>
+            <p>
+              <RichText text={t.about.text} />
+            </p>
             <div className="tag-row">
               {t.about.tags.map((tag) => (
                 <span key={tag}>{tag}</span>
@@ -82,7 +85,28 @@ export default async function LocalePage({ params }: PageProps) {
           </div>
         </section>
 
-        <BeyondWork content={t.beyondWork} />
+        <section className={`studio-section education-section education-section-${lang}`}>
+          <SectionHeading title={t.educationTitle} eyebrow={t.sectionEyebrows.education} />
+          <div className="timeline">
+            {t.education.map(([school, detail]) => {
+              const logo = educationLogos[school as keyof typeof educationLogos];
+
+              return (
+                <article className={logo ? "has-logo" : undefined} key={school}>
+                  <div className="timeline-school">
+                    <h3>{school}</h3>
+                    {logo ? (
+                      <Image className="school-logo" src={logo.src} alt={logo.alt} width={72} height={72} unoptimized />
+                    ) : null}
+                  </div>
+                  <p>
+                    <RichText text={detail} />
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
 
         <section className="split-section">
           <article className="studio-section" id="ground">
@@ -97,20 +121,28 @@ export default async function LocalePage({ params }: PageProps) {
               />
               <span>西门子医疗</span>
             </div>
-            <p>{t.ground.text}</p>
+            <p>
+              <RichText text={t.ground.text} />
+            </p>
             <ul className="check-list">
               {t.ground.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  <RichText text={item} />
+                </li>
               ))}
             </ul>
           </article>
 
           <article className="studio-section" id="data">
             <SectionHeading title={t.data.title} eyebrow={t.sectionEyebrows.data} />
-            <p>{t.data.text}</p>
+            <p>
+              <RichText text={t.data.text} />
+            </p>
             <ul className="check-list">
               {t.data.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  <RichText text={item} />
+                </li>
               ))}
             </ul>
           </article>
@@ -128,7 +160,9 @@ export default async function LocalePage({ params }: PageProps) {
         <section className="lab-section" id="lab">
           <article className="studio-section lab-copy">
             <SectionHeading title={t.lab.title} eyebrow={t.sectionEyebrows.lab} />
-            <p>{t.lab.text}</p>
+            <p>
+              <RichText text={t.lab.text} />
+            </p>
             <div className="tag-row">
               {t.lab.items.map((item) => (
                 <span key={item}>{item}</span>
@@ -142,37 +176,22 @@ export default async function LocalePage({ params }: PageProps) {
               {t.capabilities.map(([title, body]) => (
                 <section key={title}>
                   <h3>{title}</h3>
-                  <p>{body}</p>
+                  <p>
+                    <RichText text={body} />
+                  </p>
                 </section>
               ))}
             </div>
           </article>
         </section>
 
-        <section className={`studio-section education-section education-section-${lang}`}>
-          <SectionHeading title={t.educationTitle} eyebrow={t.sectionEyebrows.education} />
-          <div className="timeline">
-            {t.education.map(([school, detail]) => {
-              const logo = educationLogos[school as keyof typeof educationLogos];
-
-              return (
-                <article className={logo ? "has-logo" : undefined} key={school}>
-                  <div className="timeline-school">
-                    <h3>{school}</h3>
-                    {logo ? (
-                      <Image className="school-logo" src={logo.src} alt={logo.alt} width={72} height={72} unoptimized />
-                    ) : null}
-                  </div>
-                  <p>{detail}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
+        <BeyondWork content={t.beyondWork} />
 
         <section className="studio-section career-section">
           <SectionHeading title={t.career.title} eyebrow={t.sectionEyebrows.career} />
-          <p>{t.career.text}</p>
+          <p>
+            <RichText text={t.career.text} />
+          </p>
           <div className="tag-row center">
             {t.career.roles.map((role) => (
               <span key={role}>{role}</span>
@@ -182,7 +201,9 @@ export default async function LocalePage({ params }: PageProps) {
 
         <section className="studio-section contact-section" id="contact">
           <SectionHeading title={t.contact.title} eyebrow={t.sectionEyebrows.contact} />
-          <p>{t.contact.text}</p>
+          <p>
+            <RichText text={t.contact.text} />
+          </p>
           <div className="action-row center">
             <a className="dark-button" href={t.links.resume}>
               {t.contact.buttons[0]}

@@ -1,4 +1,5 @@
 import { KnowledgePlanet } from "@/components/KnowledgePlanet";
+import { RichText } from "@/components/RichText";
 import type { PlanetTag } from "@/lib/planetTags";
 
 type HeroProps = {
@@ -36,8 +37,12 @@ export function Hero({ hero, links, tags }: HeroProps) {
           </span>
           <span className="hero-title-alt">{hero.titleAlt}</span>
         </h1>
-        <p className="hero-lead">{hero.lead}</p>
-        <p className="hero-body">{hero.body}</p>
+        <p className="hero-lead">
+          <RichText text={hero.lead} />
+        </p>
+        <p className="hero-body">
+          <RichText text={hero.body} />
+        </p>
         <div className="action-row">
           <a className="dark-button" href="#projects">
             {hero.primary}

@@ -1,3 +1,5 @@
+import { RichText } from "@/components/RichText";
+
 type Project = {
   title: string;
   context: string;
@@ -28,23 +30,33 @@ export function ProjectCard({ project, index, labels }: ProjectCardProps) {
       <dl>
         <div>
           <dt>{labels.context}</dt>
-          <dd>{project.context}</dd>
+          <dd>
+            <RichText text={project.context} />
+          </dd>
         </div>
         <div>
           <dt>{labels.role}</dt>
-          <dd>{project.role}</dd>
+          <dd>
+            <RichText text={project.role} />
+          </dd>
         </div>
         <div>
           <dt>{labels.approach}</dt>
-          <dd>{project.approach}</dd>
+          <dd>
+            <RichText text={project.approach} />
+          </dd>
         </div>
         <div>
           <dt>{labels.tools}</dt>
-          <dd>{project.tools}</dd>
+          <dd>
+            <RichText text={project.tools} />
+          </dd>
         </div>
         <div>
           <dt>{labels.outcome}</dt>
-          <dd>{project.outcome}</dd>
+          <dd>
+            <RichText text={project.outcome} />
+          </dd>
         </div>
       </dl>
       <div className="tag-row compact">

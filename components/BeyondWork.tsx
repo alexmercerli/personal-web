@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
 
 type BeyondWorkImage = {
@@ -50,7 +51,9 @@ export function BeyondWork({ content }: BeyondWorkProps) {
         </figure>
 
         <div className="beyond-copy">
-          <p>{content.text}</p>
+          <p>
+            <RichText text={content.text} />
+          </p>
           <blockquote>
             <span>{content.quoteLabel}</span>
             <strong>{content.quote}</strong>
@@ -75,10 +78,14 @@ export function BeyondWork({ content }: BeyondWorkProps) {
           <article className="interest-preview" key={active.key}>
             <div className="interest-preview-copy">
               <p>{active.title}</p>
-              <h3>{active.description}</h3>
+              <h3>
+                <RichText text={active.description} />
+              </h3>
               <ol>
                 {active.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>
+                    <RichText text={item} />
+                  </li>
                 ))}
               </ol>
             </div>

@@ -38,14 +38,14 @@ export const content = {
     },
     sectionEyebrows: {
       about: "01 / Positioning",
-      ground: "02 / Factory Context",
-      data: "03 / Signals",
-      projects: "04 / Applied Work",
-      lab: "05 / Product Practice",
-      capability: "06 / Kanban",
-      education: "07 / Education",
-      career: "08 / Next Step",
-      contact: "09 / Contact"
+      education: "02 / Education",
+      ground: "03 / Factory Context",
+      data: "04 / Signals",
+      projects: "05 / Applied Work",
+      lab: "06 / Product Practice",
+      capability: "07 / Kanban",
+      career: "09 / Next Step",
+      contact: "10 / Contact"
     },
     about: {
       title: "About / Identity",
@@ -54,7 +54,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / 工作之外",
-      eyebrow: "Personal Layer",
+      eyebrow: "08 / Personal Layer",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我喜欢看电影、小说、徒步，也是一个科幻和音乐爱好者。我相信把点连成面的力量，做自己的长期主义者。",
       quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
@@ -221,14 +221,14 @@ export const content = {
     },
     sectionEyebrows: {
       about: "01 / Positioning",
-      ground: "02 / Factory Context",
-      data: "03 / Signals",
-      projects: "04 / Applied Work",
-      lab: "05 / Product Practice",
-      capability: "06 / Kanban",
-      education: "07 / Education",
-      career: "08 / Next Step",
-      contact: "09 / Contact"
+      education: "02 / Education",
+      ground: "03 / Factory Context",
+      data: "04 / Signals",
+      projects: "05 / Applied Work",
+      lab: "06 / Product Practice",
+      capability: "07 / Kanban",
+      career: "09 / Next Step",
+      contact: "10 / Contact"
     },
     about: {
       title: "About / Identity",
@@ -237,7 +237,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / Personal Layer",
-      eyebrow: "Personal Layer",
+      eyebrow: "08 / Personal Layer",
       text: "I’m a person with diverse interests who loves to share and is full of energy. Outside of work, I enjoy watching movies, reading novels, and hiking, and I’m also a fan of science fiction and music. I believe in the power of connecting the dots and am committed to a long-term perspective.",
       quoteLabel: "Recent quote",
       quote: "Showing up is 80 percent of success.",
