@@ -35,6 +35,20 @@ function resolveLocale(locale: string): Locale {
   return locales.includes(locale as Locale) ? (locale as Locale) : "zh";
 }
 
+function splitEducationDetail(detail: string) {
+  const parts = detail.split(/([；;])/);
+  const segments: string[] = [];
+
+  for (let index = 0; index < parts.length; index += 2) {
+    const text = parts[index]?.trim();
+    if (!text) continue;
+
+    segments.push(`${text}${parts[index + 1] ?? ""}`);
+  }
+
+  return segments.length > 0 ? segments : [detail];
+}
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -100,8 +114,12 @@ export default async function LocalePage({ params }: PageProps) {
                       <Image className="school-logo" src={logo.src} alt={logo.alt} width={72} height={72} unoptimized />
                     ) : null}
                   </div>
-                  <p>
-                    <RichText text={detail} />
+                  <p className="education-detail">
+                    {splitEducationDetail(detail).map((segment) => (
+                      <span key={segment}>
+                        <RichText text={segment} />
+                      </span>
+                    ))}
                   </p>
                 </article>
               );

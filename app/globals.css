@@ -1033,6 +1033,7 @@ dd {
   font-weight: 800;
 }
 
+.project-link-backdrop,
 .project-video-backdrop {
   position: fixed;
   inset: 0;
@@ -1045,9 +1046,9 @@ dd {
   animation: fade-in 180ms ease both;
 }
 
+.project-link-modal,
 .project-video-modal {
   position: relative;
-  width: min(860px, 100%);
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1057,6 +1058,15 @@ dd {
   box-shadow: var(--shadow);
 }
 
+.project-link-modal {
+  width: min(430px, 100%);
+}
+
+.project-video-modal {
+  width: min(860px, 100%);
+}
+
+.project-link-close,
 .project-video-close {
   position: absolute;
   top: 16px;
@@ -1070,6 +1080,7 @@ dd {
   cursor: pointer;
 }
 
+.project-link-label,
 .project-video-label {
   margin: 0 0 10px;
   color: var(--blue);
@@ -1079,11 +1090,37 @@ dd {
   text-transform: uppercase;
 }
 
+.project-link-modal h3,
 .project-video-modal h3 {
   margin: 0 0 18px;
   color: var(--ink);
   font-size: 22px;
   line-height: 1.34;
+}
+
+.project-link-modal p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-link-modal > span {
+  display: block;
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+  padding: 12px;
+  border: 1px solid rgba(110, 157, 180, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.68);
+  color: #4c6e82;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.project-link-open {
+  width: 100%;
+  margin-top: 18px;
 }
 
 .project-video-frame {
@@ -1152,6 +1189,14 @@ dd {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.58;
+}
+
+.education-detail span {
+  display: inline;
+}
+
+.education-detail span + span {
+  margin-left: 0.35em;
 }
 
 .timeline {
@@ -1414,6 +1459,19 @@ dd {
   .school-logo {
     width: 46px;
     height: 46px;
+  }
+
+  .education-detail {
+    display: grid;
+    gap: 6px;
+  }
+
+  .education-detail span {
+    display: block;
+  }
+
+  .education-detail span + span {
+    margin-left: 0;
   }
 
   .career-section .tag-row.center {

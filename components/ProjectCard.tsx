@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent, type MouseEvent } from "react";
 import { RichText } from "@/components/RichText";
 
 type ProjectAction =
@@ -12,13 +12,16 @@ type ProjectAction =
       backTitle: string;
       backText: string;
       cta: string;
-      href: string;
     }
   | {
       type: "external";
       label: string;
       hint: string;
       href: string;
+      modalTitle: string;
+      modalText: string;
+      openLabel: string;
+      close: string;
     }
   | {
       type: "video";
@@ -56,22 +59,24 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, index, labels }: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const [linkOpen, setLinkOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
   const isFlip = project.action.type === "flip";
 
   useEffect(() => {
-    if (!videoOpen) return;
+    if (!linkOpen && !videoOpen) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        setLinkOpen(false);
         setVideoOpen(false);
       }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [videoOpen]);
+  }, [linkOpen, videoOpen]);
 
   const activateCard = () => {
     if (project.action.type === "flip") {
@@ -80,7 +85,7 @@ export function ProjectCard({ project, index, labels }: ProjectCardProps) {
     }
 
     if (project.action.type === "external") {
-      window.open(project.action.href, "_blank", "noopener,noreferrer");
+      setLinkOpen(true);
       return;
     }
 
@@ -92,6 +97,17 @@ export function ProjectCard({ project, index, labels }: ProjectCardProps) {
     if (event.key !== "Enter" && event.key !== " ") return;
     event.preventDefault();
     activateCard();
+  };
+
+  const openExternalLink = () => {
+    if (project.action.type !== "external") return;
+    window.open(project.action.href, "_blank", "noopener,noreferrer");
+    setLinkOpen(false);
+  };
+
+  const openEmailModal = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    window.dispatchEvent(new Event("open-email-modal"));
   };
 
   return (
@@ -158,18 +174,41 @@ export function ProjectCard({ project, index, labels }: ProjectCardProps) {
               <p className="project-back-eyebrow">{project.action.backEyebrow}</p>
               <h3>{project.action.backTitle}</h3>
               <p>{project.action.backText}</p>
-              <a
+              <button
                 className="dark-button project-back-link"
-                href={project.action.href}
-                onClick={(event) => event.stopPropagation()}
+                type="button"
+                onClick={openEmailModal}
               >
                 {project.action.cta}
-              </a>
+              </button>
               <span className="project-action-line">{project.action.hint}</span>
             </div>
           ) : null}
         </div>
       </article>
+
+      {project.action.type === "external" && linkOpen ? (
+        <div className="project-link-backdrop" role="presentation" onClick={() => setLinkOpen(false)}>
+          <section
+            aria-label={project.action.modalTitle}
+            aria-modal="true"
+            className="project-link-modal"
+            role="dialog"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button className="project-link-close" type="button" onClick={() => setLinkOpen(false)}>
+              {project.action.close}
+            </button>
+            <p className="project-link-label">{project.action.label}</p>
+            <h3>{project.action.modalTitle}</h3>
+            <p>{project.action.modalText}</p>
+            <span>{project.action.href}</span>
+            <button className="dark-button project-link-open" type="button" onClick={openExternalLink}>
+              {project.action.openLabel}
+            </button>
+          </section>
+        </div>
+      ) : null}
 
       {project.action.type === "video" && videoOpen ? (
         <div className="project-video-backdrop" role="presentation" onClick={() => setVideoOpen(false)}>
@@ -186,7 +225,14 @@ export function ProjectCard({ project, index, labels }: ProjectCardProps) {
             <p className="project-video-label">{project.action.label}</p>
             <h3>{project.action.modalTitle}</h3>
             <div className="project-video-frame">
-              <video controls preload="metadata" onCanPlay={() => setVideoReady(true)}>
+              <video
+                controls
+                controlsList="nodownload"
+                disablePictureInPicture
+                preload="metadata"
+                onCanPlay={() => setVideoReady(true)}
+                onContextMenu={(event) => event.preventDefault()}
+              >
                 <source src={project.action.src} type="video/mp4" />
               </video>
               {!videoReady ? (

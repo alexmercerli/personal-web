@@ -24,6 +24,16 @@ export function ContactActions({ labels, links, dialog }: ContactActionsProps) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
+    const onOpenEmailModal = () => {
+      setCopied(false);
+      setOpen(true);
+    };
+
+    window.addEventListener("open-email-modal", onOpenEmailModal);
+    return () => window.removeEventListener("open-email-modal", onOpenEmailModal);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
 
     const onKeyDown = (event: KeyboardEvent) => {

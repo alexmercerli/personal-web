@@ -28,14 +28,14 @@ export const content = {
       eyebrow: "Personal Knowledge Studio",
       titleLines: ["李奕成 Mercer", "个人主页"],
       titleAlt: "Yicheng Li / Mercer — AI Portfolio",
-      lead: "从磁共振精密制造现场出发，连接工艺、生产、自动化测试、机器视觉与 AI 驱动业务。",
+      lead: "一个从磁共振精密制造现场出发的工艺工程师。",
       body: "**我正在寻求向AI 产品经理，AI 项目经理方向转型，关注 AI 如何提高生产力、改善质量并赋能业务。**",
       primary: "查看作品集",
       secondary: "下载简历",
       tertiary: "联系我",
       planetTitle: "Knowledge Planet",
       directionLabel: "Current Direction",
-      planetNote: "连接制造现场、AI 工具和产品落地，面向可验证、可交付、可使用的工业 AI 实践。"
+      planetNote: "连接具体业务、AI工作流和制造现场，面向可验证、可交付、可使用的工业 AI 实践。"
     },
     links: sharedLinks,
     sectionEyebrows: {
@@ -52,7 +52,7 @@ export const content = {
     about: {
       title: "About / 关于我",
       text: "我是李奕成，一名从磁共振精密制造一线成长起来的工艺与自动化工程师。我的长期方向是将制造业 know-how、AI 工具能力与项目管理方法结合起来，推动 AI 在真实工业场景中的落地。",
-      tags: ["工艺工程师", "自动化工程师", "AI 实践者", "英语可作为工作语言", "逻辑思维能力","创造性"]
+      tags: ["工艺工程师", "自动化工程师", "AI 实践者", "英语口语流利", "逻辑思维能力","第一性原理"]
     },
     beyondWork: {
       title: "Beyond Work / 工作之外",
@@ -105,7 +105,7 @@ export const content = {
     },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
-      text: "我的工程经验来自真实制造现场一线：新产品导入、工艺开发、troubleshooting 、设备故障、质量问题和供应商管理。这些经历让我理解，AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果。同时，在西门子医疗的四年经历磨练了我的一线经验和靠谱素养。",
+      text: "我在真实制造现场积累了工作经验：新产品导入、工艺开发、troubleshooting 、设备故障、质量问题和供应商管理。我认为 AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果上去。在西门子医疗的四年经历磨练了我的工程经验和靠谱素养。",
       items: [
         "西门子医疗磁共振事业部工艺工程师",
         "管理 5 款量产产线中的工艺、设备、质量、物料问题",
@@ -117,8 +117,8 @@ export const content = {
     },
     data: {
       title: "Automation & Data / 自动化与数据",
-      text: "我关注如何把制造过程中的数据变成可操作的判断：从自动化测试，到风险预警，再到质量改善。对我来说，数据不是报表，而是机器学习模型的输入。",
-      items: ["自动化测试解决方案", "LabVIEW / Python / MATLAB", "历史过程工艺数据", "测试结果与不良记录", "XGBoost 不良风险预警模型", "约 CNY 400K / 年成本节省"]
+      text: "我关注如何利用好生产数据：从数据分析，到工艺预警，再到质量改善。数据不是看板，而是机器学习模型的输入。",
+      items: ["自动化测试解决方案", "LabVIEW / Python / MATLAB", "历史过程工艺数据", "测试结果与不良记录", "分析报告"]
     },
     projectsTitle: "Industrial AI Projects / 工业 AI 项目",
     projectLabels: {
@@ -131,11 +131,11 @@ export const content = {
     projects: [
       {
         title: "基于Labview的自动化测试平台",
-        context: "赋能医疗器械制造过程中的测试效率提升90%，识别质量风险",
+        context: "当前的人工测试流程需要使用多种测试仪器，工艺繁琐且耗费时间长",
         role: "自动化方案设计与实现",
-        approach: "结合历史工艺数据、测试结果和不良记录，构建基于 XGBoost 的风险预警模型。",
+        approach: "开发了基于Labview的一键测试平台，并且结合历史工艺数据、测试结果和不良记录，构建基于 XGBoost 的风险预警模型。",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
-        outcome: "实现约 CNY 400K / 年成本节省",
+        outcome: "节省工时，将制造过程中的测试效率提升90%，实现约 CNY 400K / 年成本节省",
         keywords: ["Automation Testing", "XGBoost", "Quality Prediction"],
         action: {
           type: "flip",
@@ -143,9 +143,8 @@ export const content = {
           backEyebrow: "ACCESS NOTE",
           hint: "点击翻面",
           backTitle: "联系作者获取 demo",
-          backText: "该平台涉及真实制造现场流程与测试逻辑，demo 可在沟通后单独展示。",
-          cta: "Email Me",
-          href: "#contact"
+          backText: "由于涉及真实制造现场流程与测试逻辑，demo 可在沟通后单独展示。",
+          cta: "Email Me"
         }
       },
       {
@@ -160,7 +159,11 @@ export const content = {
           type: "external",
           label: "Case Link",
           hint: "打开项目链接",
-          href: "http://www.peng-le.cn/?PCB-AOI/84.html"
+          href: "http://www.peng-le.cn/?PCB-AOI/84.html",
+          modalTitle: "打开项目链接",
+          modalText: "该案例将在新的浏览器标签页中打开。",
+          openLabel: "继续打开",
+          close: "取消"
         }
       },
       {
@@ -172,28 +175,27 @@ export const content = {
         outcome: "病灶分割准确率 91.7%，在清华长庚医院试用运行，项目获得课程一等奖",
         keywords: ["Medical AI", "CT Segmentation", "Transformer"],
         action: {
-          type: "video",
+          type: "flip",
           label: "Video",
-          hint: "观看项目视频",
-          src: "/videos/medical-ai-demo.mp4",
-          modalTitle: "项目视频 / Medical AI Demo",
-          placeholderTitle: "视频占位符",
-          placeholderText: "上传视频到 /public/videos/medical-ai-demo.mp4 后，这里会自动播放。",
-          close: "关闭"
+          backEyebrow: "ACCESS NOTE",
+          hint: "点击翻面",
+          backTitle: "联系作者获取视频",
+          backText: "该项目视频可在沟通后单独提供。",
+          cta: "Email Me"
         }
       }
     ],
     lab: {
       title: "AI Product & Agent Lab / AI 产品与 Agent 实验室",
       text: "我正在构建 AI 产品经理所需要的实践能力：理解业务问题，拆解用户需求，设计 AI 功能，快速完成原型验证，并判断它是否能进入真实工作流。",
-      items: ["主流 AI 模型使用经验", "ChatGPT 等大模型工具链", "Openclaw & Hermes Agent", "Vibe coding", "AI 辅助开发", "Agent 工作流设计", "功能设计与原型验证", "面向业务需求拆解 AI 功能"]
+      items: ["主流 AI 模型使用经验", "机器学习原理", "Openclaw & Hermes Agent", "Vibe coding", "AI 辅助开发", "Agent 工作流设计", "功能设计与原型验证", "面向业务需求拆解 AI 功能"]
     },
     capabilityTitle: "Capability Map / 能力地图",
     capabilities: [
       ["Manufacturing Know-how", "工艺 / 设备 / 质量 / NPI / 医疗器械验证"],
       ["Automation & Data", "LabVIEW / Python / MATLAB / 自动化测试 / XGBoost"],
-      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet / 医学影像 AI"],
-      ["AI Product & Agent", "需求拆解 / 原型验证 / Agent 工作流 / AI 辅助开发"]
+      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet / AI Agent"],
+      ["Common skills", "沟通交流能力 / 项目管理能力 / 英语口语 / 基础德语 "]
     ],
     educationTitle: "Education / 教育背景",
     education: [
@@ -203,8 +205,8 @@ export const content = {
     ],
     career: {
       title: "Career Direction / 职业方向",
-      text: "我的下一阶段目标，是从工艺工程与自动化实践，走向 AI 产品经理或制造业 AI 项目经理。我希望参与那些真正进入业务流程的 AI 项目：能改善质量、提升效率、降低风险，并被一线团队实际使用。",
-      roles: ["AI 产品经理", "制造业 AI 项目经理", "工业数字化项目经理", "自动化 / AI 解决方案工程师","FDE 前沿部署工程师"]
+      text: "我的下一阶段目标，是从制造现场，走向 AI 产品经理或制造业 AI 项目经理的岗位。我希望参与那些真正进入业务流程的 AI 项目：改善质量、提升效率、降低风险，并为业务带来实际价值。",
+      roles: ["AI 产品经理", "AI 项目经理", "工业数字化项目经理", "AI 售前/解决方案工程师","FDE 前沿部署工程师"]
     },
     contact: {
       title: "Contact / 联系方式",
@@ -239,14 +241,14 @@ export const content = {
       eyebrow: "Personal Knowledge Studio",
       titleLines: ["Yicheng Li / Mercer", "AI Portfolio"],
       titleAlt: "李奕成｜AI 作品集",
-      lead: "From medical device manufacturing to AI project thinking.",
+      lead: "A process engineer shaped by precision MRI manufacturing.",
       body: "**I am seeking to transition toward AI Product Manager and AI Project Manager roles, with a focus on how AI can improve productivity, quality, and business enablement.**",
       primary: "View Portfolio",
       secondary: "Download Resume",
       tertiary: "Contact",
       planetTitle: "AI Knowledge Planet",
       directionLabel: "Current Direction",
-      planetNote: "Connecting manufacturing practice, AI tools, and product delivery for verifiable, shippable, usable industrial AI."
+      planetNote: "Connecting concrete business needs, AI workflows, and manufacturing sites for verifiable, deliverable, usable industrial AI practice."
     },
     links: sharedLinks,
     sectionEyebrows: {
@@ -263,7 +265,7 @@ export const content = {
     about: {
       title: "About / About Me",
       text: "I am Yicheng Li, also known as Mercer — a process and automation engineer who grew from the front line of precision MRI manufacturing. My long-term direction is to combine manufacturing know-how, AI tool capabilities, and project management methods to drive AI implementation in real industrial scenarios.",
-      tags: ["Process Engineer", "Automation Engineer", "AI Practitioner", "English as a Working Language", "Logical Thinking", "Creativity"]
+      tags: ["Process Engineer", "Automation Engineer", "AI Practitioner", "Fluent Spoken English", "Logical Thinking", "First Principles"]
     },
     beyondWork: {
       title: "Beyond Work / Personal Layer",
@@ -316,7 +318,7 @@ export const content = {
     },
     ground: {
       title: "Manufacturing Ground / 制造现场根基",
-      text: "My engineering experience comes from the front line of real manufacturing environments: new product introduction, process development, troubleshooting, equipment failures, quality issues, and supplier management. These experiences helped me understand that the value of AI in manufacturing must return to efficiency, quality, stability, and deliverable results. At the same time, four years at Siemens Healthineers shaped my frontline experience and reliability as an engineer.",
+      text: "I built my working experience in real manufacturing environments: new product introduction, process development, troubleshooting, equipment failures, quality issues, and supplier management. I believe the value of AI in manufacturing must return to efficiency, quality, stability, and deliverable results. Four years at Siemens Healthineers strengthened both my engineering experience and my reliability as a professional.",
       items: [
         "Process engineer in Siemens Healthineers MR business",
         "Handled process, equipment, quality, and material issues across 5 production lines",
@@ -328,8 +330,8 @@ export const content = {
     },
     data: {
       title: "Automation & Data / 自动化与数据",
-      text: "I focus on turning manufacturing data into actionable signals — from automated testing to risk prediction and quality improvement. For me, data is not just reporting. It is an early warning layer for manufacturing systems.",
-      items: ["Automated testing solutions", "LabVIEW / Python / MATLAB", "Historical process data", "Test results and defect records", "XGBoost defect risk prediction model", "Around CNY 400K annual cost saving"]
+      text: "I focus on making better use of production data: from data analysis to process early warning and quality improvement. Data is not just a dashboard. It is the input to machine learning models.",
+      items: ["Automated testing solutions", "LabVIEW / Python / MATLAB", "Historical process data", "Test results and defect records", "Analysis reports"]
     },
     projectsTitle: "Industrial AI Projects / 工业 AI 项目",
     projectLabels: {
@@ -342,11 +344,11 @@ export const content = {
     projects: [
       {
         title: "LabVIEW-Based One-button Test Platform",
-        context: "Enables a 90% increase in testing efficiency during medical device manufacturing and identifies quality risks",
+        context: "The existing manual testing process required multiple instruments, involved complex procedures, and took a long time to complete",
         role: "Solution design and implementation",
-        approach: "Built an automated testing solution and developed an XGBoost-based risk prediction model using historical process data, test results, and defect records.",
+        approach: "Developed a LabVIEW-based one-button test platform and built an XGBoost-based risk prediction model using historical process data, test results, and defect records.",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
-        outcome: "Achieved around CNY 400K annual cost saving",
+        outcome: "Saved working hours, improved testing efficiency in the manufacturing process by 90%, and achieved around CNY 400K annual cost saving",
         keywords: ["Automation Testing", "XGBoost", "Quality Prediction"],
         action: {
           type: "flip",
@@ -354,9 +356,8 @@ export const content = {
           backEyebrow: "ACCESS NOTE",
           hint: "Click to flip",
           backTitle: "Demo available on request",
-          backText: "This platform involves real manufacturing workflows and testing logic. A demo can be shared after direct contact.",
-          cta: "Email Me",
-          href: "#contact"
+          backText: "Because this platform involves real manufacturing workflows and testing logic, a demo can be shared separately after direct communication.",
+          cta: "Email Me"
         }
       },
       {
@@ -371,7 +372,11 @@ export const content = {
           type: "external",
           label: "Case Link",
           hint: "Open case link",
-          href: "http://www.peng-le.cn/?PCB-AOI/84.html"
+          href: "http://www.peng-le.cn/?PCB-AOI/84.html",
+          modalTitle: "Open project link",
+          modalText: "This case page will open in a new browser tab.",
+          openLabel: "Open Link",
+          close: "Cancel"
         }
       },
       {
@@ -383,28 +388,27 @@ export const content = {
         outcome: "Achieved 91.7% segmentation accuracy; trialed at Tsinghua Changgung Hospital and won first prize in the course project",
         keywords: ["Medical AI", "CT Segmentation", "Transformer"],
         action: {
-          type: "video",
+          type: "flip",
           label: "Video",
-          hint: "Watch project video",
-          src: "/videos/medical-ai-demo.mp4",
-          modalTitle: "Project Video / Medical AI Demo",
-          placeholderTitle: "Video placeholder",
-          placeholderText: "Upload your video to /public/videos/medical-ai-demo.mp4 and it will play here automatically.",
-          close: "Close"
+          backEyebrow: "ACCESS NOTE",
+          hint: "Click to flip",
+          backTitle: "Video available on request",
+          backText: "The project video can be shared separately after direct communication.",
+          cta: "Email Me"
         }
       }
     ],
     lab: {
       title: "AI Product & Agent Lab / AI 产品与 Agent 实验室",
       text: "I am building the practical skill set required for AI product work: understanding business problems, translating needs into AI features, validating prototypes quickly, and evaluating whether they can fit into real workflows.",
-      items: ["Mainstream AI model usage", "ChatGPT and LLM toolchains", "Openclaw & Hermes Agent", "Vibe coding", "AI-assisted development", "Agent workflow design", "Feature design and prototype validation", "AI feature breakdown from business needs"]
+      items: ["Mainstream AI model usage", "Machine learning principles", "Openclaw & Hermes Agent", "Vibe coding", "AI-assisted development", "Agent workflow design", "Feature design and prototype validation", "AI feature breakdown from business needs"]
     },
     capabilityTitle: "Capability Map / 能力地图",
     capabilities: [
       ["Manufacturing Know-how", "Process / Equipment / Quality / NPI / Medical Device Validation"],
       ["Automation & Data", "LabVIEW / Python / MATLAB / Automated Testing / XGBoost"],
-      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet / Medical AI"],
-      ["AI Product & Agent", "Requirement Breakdown / Prototype Validation / Agent Workflow / AI-assisted Development"]
+      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet / AI Agent"],
+      ["Common skills", "Communication / Project Management / Spoken English / Basic German"]
     ],
     educationTitle: "Education / 教育背景",
     education: [
@@ -414,8 +418,8 @@ export const content = {
     ],
     career: {
       title: "Career Direction / 职业方向",
-      text: "My next step is to move from process engineering and automation practice toward AI product management and industrial AI project delivery. I am interested in AI solutions that enter real workflows, improve quality, increase efficiency, reduce risk, and are actually used by frontline teams.",
-      roles: ["AI Product Manager", "Industrial AI Project Manager", "Manufacturing Digitalization PM", "Automation / AI Solution Engineer","FDE"]
+      text: "My next step is to move from the manufacturing site toward AI Product Manager or industrial AI Project Manager roles. I hope to work on AI projects that truly enter business workflows, improve quality, increase efficiency, reduce risk, and create practical business value.",
+      roles: ["AI Product Manager", "AI Project Manager", "Industrial Digitalization PM", "AI Presales / Solution Engineer", "FDE"]
     },
     contact: {
       title: "Contact / 联系方式",
@@ -423,7 +427,7 @@ export const content = {
       buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"],
       emailDialog: {
         title: "Email",
-        hint: "Send me a Email and I will reply you soon.",
+        hint: "Send me an email and I will reply soon.",
         copy: "Copy Email",
         copied: "Copied",
         close: "Close"
