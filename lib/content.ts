@@ -136,7 +136,17 @@ export const content = {
         approach: "结合历史工艺数据、测试结果和不良记录，构建基于 XGBoost 的风险预警模型。",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
         outcome: "实现约 CNY 400K / 年成本节省",
-        keywords: ["Automation Testing", "XGBoost", "Quality Prediction"]
+        keywords: ["Automation Testing", "XGBoost", "Quality Prediction"],
+        action: {
+          type: "flip",
+          label: "Demo",
+          backEyebrow: "ACCESS NOTE",
+          hint: "点击翻面",
+          backTitle: "联系作者获取 demo",
+          backText: "该平台涉及真实制造现场流程与测试逻辑，demo 可在沟通后单独展示。",
+          cta: "Email Me",
+          href: "#contact"
+        }
       },
       {
         title: "卷对卷柔性电路板机器视觉缺陷检测",
@@ -145,7 +155,13 @@ export const content = {
         approach: "使用 OpenCV 完成图像处理、目标区域提取和检测结果后处理；基于 ResNet-18 构建缺陷分类模型。",
         tools: "OpenCV, ResNet-18, Industrial Camera, Image Processing",
         outcome: "漏检率下降 90%，处理速度提升 50%，召回率 98%+",
-        keywords: ["Machine Vision", "OpenCV", "Industrial Inspection"]
+        keywords: ["Machine Vision", "OpenCV", "Industrial Inspection"],
+        action: {
+          type: "external",
+          label: "Case Link",
+          hint: "打开项目链接",
+          href: "http://www.peng-le.cn/?PCB-AOI/84.html"
+        }
       },
       {
         title: "基于 AI 的罕见病 CT 影像辅助诊断方案",
@@ -154,7 +170,17 @@ export const content = {
         approach: "结合 Transformer 架构与 Unet-8 算法，实现病灶识别分割。",
         tools: "Python, Transformer, Unet, Medical Image Segmentation",
         outcome: "病灶分割准确率 91.7%，在清华长庚医院试用运行，项目获得课程一等奖",
-        keywords: ["Medical AI", "CT Segmentation", "Transformer"]
+        keywords: ["Medical AI", "CT Segmentation", "Transformer"],
+        action: {
+          type: "video",
+          label: "Video",
+          hint: "观看项目视频",
+          src: "/videos/medical-ai-demo.mp4",
+          modalTitle: "项目视频 / Medical AI Demo",
+          placeholderTitle: "视频占位符",
+          placeholderText: "上传视频到 /public/videos/medical-ai-demo.mp4 后，这里会自动播放。",
+          close: "关闭"
+        }
       }
     ],
     lab: {
@@ -321,7 +347,17 @@ export const content = {
         approach: "Built an automated testing solution and developed an XGBoost-based risk prediction model using historical process data, test results, and defect records.",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
         outcome: "Achieved around CNY 400K annual cost saving",
-        keywords: ["Automation Testing", "XGBoost", "Quality Prediction"]
+        keywords: ["Automation Testing", "XGBoost", "Quality Prediction"],
+        action: {
+          type: "flip",
+          label: "Demo",
+          backEyebrow: "ACCESS NOTE",
+          hint: "Click to flip",
+          backTitle: "Demo available on request",
+          backText: "This platform involves real manufacturing workflows and testing logic. A demo can be shared after direct contact.",
+          cta: "Email Me",
+          href: "#contact"
+        }
       },
       {
         title: "Machine Vision Defect Detection for Roll-to-roll Flexible Circuit Boards",
@@ -330,7 +366,13 @@ export const content = {
         approach: "Used OpenCV for image processing, ROI extraction, and post-processing; built a ResNet-18 model for defect classification.",
         tools: "OpenCV, ResNet-18, Industrial Camera, Image Processing",
         outcome: "Reduced missed detection rate by 90%, improved processing speed by 50%, and achieved 98%+ recall",
-        keywords: ["Machine Vision", "OpenCV", "Industrial Inspection"]
+        keywords: ["Machine Vision", "OpenCV", "Industrial Inspection"],
+        action: {
+          type: "external",
+          label: "Case Link",
+          hint: "Open case link",
+          href: "http://www.peng-le.cn/?PCB-AOI/84.html"
+        }
       },
       {
         title: "AI-assisted CT Image Diagnosis for Rare Disease",
@@ -339,7 +381,17 @@ export const content = {
         approach: "Developed a Transformer-enhanced Unet-8 model for lesion segmentation.",
         tools: "Python, Transformer, Unet, Medical Image Segmentation",
         outcome: "Achieved 91.7% segmentation accuracy; trialed at Tsinghua Changgung Hospital and won first prize in the course project",
-        keywords: ["Medical AI", "CT Segmentation", "Transformer"]
+        keywords: ["Medical AI", "CT Segmentation", "Transformer"],
+        action: {
+          type: "video",
+          label: "Video",
+          hint: "Watch project video",
+          src: "/videos/medical-ai-demo.mp4",
+          modalTitle: "Project Video / Medical AI Demo",
+          placeholderTitle: "Video placeholder",
+          placeholderText: "Upload your video to /public/videos/medical-ai-demo.mp4 and it will play here automatically.",
+          close: "Close"
+        }
       }
     ],
     lab: {
