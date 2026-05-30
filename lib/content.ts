@@ -39,15 +39,15 @@ export const content = {
     },
     links: sharedLinks,
     sectionEyebrows: {
-      about: "01 / Positioning",
-      education: "02 / Education",
-      ground: "03 / Factory Context",
-      data: "04 / Signals",
-      projects: "05 / Applied Work",
-      lab: "06 / Product Practice",
-      capability: "07 / Kanban",
-      career: "09 / Next Step",
-      contact: "10 / Contact"
+      about: "01",
+      education: "02",
+      ground: "03",
+      data: "04",
+      projects: "05",
+      lab: "06",
+      capability: "07",
+      career: "09",
+      contact: "10"
     },
     about: {
       title: "About / 关于我",
@@ -56,7 +56,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / 工作之外",
-      eyebrow: "08 / Personal Layer",
+      eyebrow: "08",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我喜欢看电影、小说、徒步，也是一个科幻和音乐爱好者。我相信把点连成面的力量，做自己的长期主义者。",
       quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
@@ -104,7 +104,7 @@ export const content = {
       ]
     },
     ground: {
-      title: "Manufacturing Ground / 制造现场根基",
+      title: "Working Experience / 工作经验",
       text: "我在真实制造现场积累了工作经验：新产品导入、工艺开发、troubleshooting 、设备故障、质量问题和供应商管理。我认为 AI 在制造业中的价值，必须回到效率、质量、稳定性和可交付结果上去。在西门子医疗的四年经历磨练了我的工程经验和靠谱素养。",
       items: [
         "西门子医疗磁共振事业部工艺工程师",
@@ -117,10 +117,22 @@ export const content = {
     },
     data: {
       title: "Automation & Data / 自动化与数据",
-      text: "我关注如何利用好生产数据：从数据分析，到工艺预警，再到质量改善。数据不是看板，而是机器学习模型的输入。",
+      text: "我关注如何利用好生产数据：从数据分析，到工艺预警，再到质量改善。数据不单单可以用来做看板，也可以用来做机器学习的预测。",
       items: ["自动化测试解决方案", "LabVIEW / Python / MATLAB", "历史过程工艺数据", "测试结果与不良记录", "分析报告"]
     },
-    projectsTitle: "Industrial AI Projects / 工业 AI 项目",
+    projectsTitle: "AI Projects / AI 项目",
+    workflowTeaser: {
+      eyebrow: "Centerpiece Prototype",
+      title: "Industrial AI Multi-Agent Workflow Showcase",
+      text: "一个模拟制造问题调查的交互式 AI 工作流原型，展示多 Agent 协作、风险评估和人工复核。",
+      cta: "Launch Experience"
+    },
+    ragTeaser: {
+      eyebrow: "",
+      title: "基于RAG的企业知识库搭建",
+      text: "一个企业知识库的真实Demo演示：选择私有文档/数据，提出问题，可视化RAG（检索增强生成）的流程，并且演示如何将生成的上下文和Prompt输入给LLM。",
+      cta: "打开Demo演示"
+    },
     projectLabels: {
       context: "项目背景",
       role: "我的角色",
@@ -186,15 +198,15 @@ export const content = {
       }
     ],
     lab: {
-      title: "AI Product & Agent Lab / AI 产品与 Agent 实验室",
-      text: "我正在构建 AI 产品经理所需要的实践能力：理解业务问题，拆解用户需求，设计 AI 功能，快速完成原型验证，并判断它是否能进入真实工作流。",
-      items: ["主流 AI 模型使用经验", "机器学习原理", "Openclaw & Hermes Agent", "Vibe coding", "AI 辅助开发", "Agent 工作流设计", "功能设计与原型验证", "面向业务需求拆解 AI 功能"]
+      title: "AI Agent Lab / AI Agent 实验室",
+      text: "我正在将AI落地：我能深刻理解业务需求，设计产品功能，快速完成原型验证，并判断它是否被实际使用并创造价值。",
+      items: ["AI Workflow", "RAG", "企业知识库"]
     },
     capabilityTitle: "Capability Map / 能力地图",
     capabilities: [
-      ["Manufacturing Know-how", "工艺 / 设备 / 质量 / NPI / 医疗器械验证"],
-      ["Automation & Data", "LabVIEW / Python / MATLAB / 自动化测试 / XGBoost"],
-      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet / AI Agent"],
+      ["Manufacturing Know-how", "工艺 / 设备 / 质量 / NPI / 验证与确认"],
+      ["Automation & Data", "LabVIEW / Python / MATLAB / 自动化测试 / 机器学习"],
+      ["AI & Computer Vision", "OpenCV / ResNet-18 / Transformer / Unet"],
       ["Common skills", "沟通交流能力 / 项目管理能力 / 英语口语 / 基础德语 "]
     ],
     educationTitle: "Education / 教育背景",
@@ -239,8 +251,8 @@ export const content = {
     },
     hero: {
       eyebrow: "Personal Knowledge Studio",
-      titleLines: ["Yicheng Li / Mercer", "AI Portfolio"],
-      titleAlt: "李奕成｜AI 作品集",
+      titleLines: ["Yicheng Li / Mercer", "Personal Homepage"],
+      titleAlt: "李奕成 Mercer｜个人主页",
       lead: "A process engineer shaped by precision MRI manufacturing.",
       body: "**I am seeking to transition toward AI Product Manager and AI Project Manager roles, with a focus on how AI can improve productivity, quality, and business enablement.**",
       primary: "View Portfolio",
@@ -252,15 +264,15 @@ export const content = {
     },
     links: sharedLinks,
     sectionEyebrows: {
-      about: "01 / Positioning",
-      education: "02 / Education",
-      ground: "03 / Factory Context",
-      data: "04 / Signals",
-      projects: "05 / Applied Work",
-      lab: "06 / Product Practice",
-      capability: "07 / Kanban",
-      career: "09 / Next Step",
-      contact: "10 / Contact"
+      about: "01",
+      education: "02",
+      ground: "03",
+      data: "04",
+      projects: "05",
+      lab: "06",
+      capability: "07",
+      career: "09",
+      contact: "10"
     },
     about: {
       title: "About / About Me",
@@ -269,7 +281,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / Personal Layer",
-      eyebrow: "08 / Personal Layer",
+      eyebrow: "08",
       text: "I’m a person with diverse interests who loves to share and is full of energy. Outside of work, I enjoy watching movies, reading novels, and hiking, and I’m also a fan of science fiction and music. I believe in the power of connecting the dots and am committed to a long-term perspective.",
       quoteLabel: "Recent quote",
       quote: "Showing up is 80 percent of success.",
@@ -317,15 +329,15 @@ export const content = {
       ]
     },
     ground: {
-      title: "Manufacturing Ground / 制造现场根基",
-      text: "I built my working experience in real manufacturing environments: new product introduction, process development, troubleshooting, equipment failures, quality issues, and supplier management. I believe the value of AI in manufacturing must return to efficiency, quality, stability, and deliverable results. Four years at Siemens Healthineers strengthened both my engineering experience and my reliability as a professional.",
+      title: "Working Experience / Engineering Practice",
+      text: "I built my working experience in real manufacturing environments: new product introduction, process development, troubleshooting, equipment failures, quality issues, and supplier management. I believe the value of AI in manufacturing must return to efficiency, quality, stability, and deliverable outcomes. Four years at Siemens Healthineers strengthened my engineering experience and my reliability as a professional.",
       items: [
         "Process engineer in Siemens Healthineers MR business",
-        "Handled process, equipment, quality, and material issues across 5 production lines",
+        "Managed process, equipment, quality, and material issues across 5 mass-production lines",
         "Responsible for product yield above 99.8% in 2025",
         "MR sub-component process development / NPI",
-        "Large magnetic field test system installation and validation",
-        "Medical device manufacturing and validation know-how"
+        "Large magnetic field test system introduction, installation, and validation",
+        "Advanced equipment / precision product manufacturing and validation know-how"
       ]
     },
     data: {
@@ -333,7 +345,19 @@ export const content = {
       text: "I focus on making better use of production data: from data analysis to process early warning and quality improvement. Data is not just a dashboard. It is the input to machine learning models.",
       items: ["Automated testing solutions", "LabVIEW / Python / MATLAB", "Historical process data", "Test results and defect records", "Analysis reports"]
     },
-    projectsTitle: "Industrial AI Projects / 工业 AI 项目",
+    projectsTitle: "AI Projects / Applied Work",
+    workflowTeaser: {
+      eyebrow: "Centerpiece Prototype",
+      title: "Industrial AI Multi-Agent Workflow Showcase",
+      text: "An interactive AI workflow prototype that simulates manufacturing investigation, multi-agent collaboration, risk evaluation, and human review.",
+      cta: "Launch Experience"
+    },
+    ragTeaser: {
+      eyebrow: "",
+      title: "Enterprise Knowledge Base Built with RAG",
+      text: "A real demo of an enterprise knowledge base: select private documents/data, ask questions, visualize the RAG (retrieval-augmented generation) workflow, and see how the generated context and prompt are passed into an LLM.",
+      cta: "Open Demo"
+    },
     projectLabels: {
       context: "Context",
       role: "My Role",
@@ -343,10 +367,10 @@ export const content = {
     },
     projects: [
       {
-        title: "LabVIEW-Based One-button Test Platform",
+        title: "LabVIEW-Based Automated Test Platform",
         context: "The existing manual testing process required multiple instruments, involved complex procedures, and took a long time to complete",
         role: "Solution design and implementation",
-        approach: "Developed a LabVIEW-based one-button test platform and built an XGBoost-based risk prediction model using historical process data, test results, and defect records.",
+        approach: "Developed a LabVIEW-based one-button test platform and built an XGBoost-based risk warning model using historical process data, test results, and defect records.",
         tools: "LabVIEW, Python, XGBoost, Manufacturing Data",
         outcome: "Saved working hours, improved testing efficiency in the manufacturing process by 90%, and achieved around CNY 400K annual cost saving",
         keywords: ["Automation Testing", "XGBoost", "Quality Prediction"],
@@ -399,9 +423,9 @@ export const content = {
       }
     ],
     lab: {
-      title: "AI Product & Agent Lab / AI 产品与 Agent 实验室",
-      text: "I am building the practical skill set required for AI product work: understanding business problems, translating needs into AI features, validating prototypes quickly, and evaluating whether they can fit into real workflows.",
-      items: ["Mainstream AI model usage", "Machine learning principles", "Openclaw & Hermes Agent", "Vibe coding", "AI-assisted development", "Agent workflow design", "Feature design and prototype validation", "AI feature breakdown from business needs"]
+      title: "AI Agent Lab / Product Practice",
+      text: "I am turning AI into practical workflows: understanding business needs deeply, designing product features, quickly validating prototypes, and judging whether they are actually used and able to create value.",
+      items: ["AI Workflow", "RAG", "Enterprise Knowledge Base"]
     },
     capabilityTitle: "Capability Map / 能力地图",
     capabilities: [
@@ -419,7 +443,7 @@ export const content = {
     career: {
       title: "Career Direction / 职业方向",
       text: "My next step is to move from the manufacturing site toward AI Product Manager or industrial AI Project Manager roles. I hope to work on AI projects that truly enter business workflows, improve quality, increase efficiency, reduce risk, and create practical business value.",
-      roles: ["AI Product Manager", "AI Project Manager", "Industrial Digitalization PM", "AI Presales / Solution Engineer", "FDE"]
+      roles: ["AI Product Manager", "AI Project Manager", "Industrial Digitalization PM", "AI Presales / Solution Engineer", "FDE / Forward Deployed Engineer"]
     },
     contact: {
       title: "Contact / 联系方式",

@@ -21,9 +21,11 @@ type HeaderProps = {
   links: {
     resume: string;
   };
+  localeHref?: string;
+  navPrefix?: string;
 };
 
-export function Header({ locale, brand, nav, links }: HeaderProps) {
+export function Header({ locale, brand, nav, links, localeHref, navPrefix = "" }: HeaderProps) {
   const nextLocale = locale === "zh" ? "en" : "zh";
 
   return (
@@ -41,17 +43,17 @@ export function Header({ locale, brand, nav, links }: HeaderProps) {
       </Link>
 
       <nav className="desktop-nav" aria-label="Main navigation">
-        <a href="#about">{nav.about}</a>
-        <a href="#ground">{nav.ground}</a>
-        <a href="#data">{nav.data}</a>
-        <a href="#projects">{nav.projects}</a>
-        <a href="#lab">{nav.lab}</a>
-        <a href="#portfolio">{nav.portfolio}</a>
-        <a href="#contact">{nav.contact}</a>
+        <a href={`${navPrefix}#about`}>{nav.about}</a>
+        <a href={`${navPrefix}#ground`}>{nav.ground}</a>
+        <a href={`${navPrefix}#data`}>{nav.data}</a>
+        <a href={`${navPrefix}#projects`}>{nav.projects}</a>
+        <a href={`${navPrefix}#lab`}>{nav.lab}</a>
+        <a href={`${navPrefix}#portfolio`}>{nav.portfolio}</a>
+        <a href={`${navPrefix}#contact`}>{nav.contact}</a>
       </nav>
 
       <div className="header-actions">
-        <Link className="soft-button" href={`/${nextLocale}`}>
+        <Link className="soft-button" href={localeHref ?? `/${nextLocale}`}>
           {locale === "zh" ? "EN" : "中文"}
         </Link>
         <a className="dark-button" href={links.resume}>

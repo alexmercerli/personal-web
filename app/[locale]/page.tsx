@@ -9,6 +9,7 @@ import { content, type Locale } from "@/lib/content";
 import { planetTags } from "@/lib/planetTags";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 const locales: Locale[] = ["zh", "en"];
 
@@ -186,6 +187,16 @@ export default async function LocalePage({ params }: PageProps) {
               {t.lab.items.map((item) => (
                 <span key={item}>{item}</span>
               ))}
+            </div>
+            <div className="workflow-teaser lab-workflow-teaser">
+              <div>
+                {t.ragTeaser.eyebrow ? <p>{t.ragTeaser.eyebrow}</p> : null}
+                <h3>{t.ragTeaser.title}</h3>
+                <span>{t.ragTeaser.text}</span>
+              </div>
+              <Link className="dark-button" href={`/${lang}/rag-showcase`}>
+                {t.ragTeaser.cta}
+              </Link>
             </div>
           </article>
 
