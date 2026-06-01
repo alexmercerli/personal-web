@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { BeyondWork } from "@/components/BeyondWork";
 import { ContactActions } from "@/components/ContactActions";
+import { MobileTabBar } from "@/components/MobileTabBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { RichText } from "@/components/RichText";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -86,6 +87,7 @@ export default async function LocalePage({ params }: PageProps) {
       <Header locale={lang} brand={t.brand} nav={t.nav} links={t.links} />
       <main>
         <Hero hero={t.hero} links={t.links} tags={planetTags} />
+        <MobileTabBar tabs={t.mobileTabs} />
 
         <section className="studio-section identity-section" id="about">
           <SectionHeading title={t.about.title} eyebrow={t.sectionEyebrows.about} />
@@ -177,8 +179,8 @@ export default async function LocalePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="lab-section" id="lab">
-          <article className="studio-section lab-copy">
+        <section className="lab-section">
+          <article className="studio-section lab-copy" id="lab">
             <SectionHeading title={t.lab.title} eyebrow={t.sectionEyebrows.lab} />
             <p>
               <RichText text={t.lab.text} />

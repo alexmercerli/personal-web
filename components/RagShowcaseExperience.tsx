@@ -28,6 +28,10 @@ function formatScore(score?: number) {
   return score.toFixed(3);
 }
 
+function getPdfPreviewHref(href: string) {
+  return `${href}#page=1&view=Fit&zoom=page-fit`;
+}
+
 export function RagShowcaseExperience({ content }: RagShowcaseExperienceProps) {
   const [selectedDocumentId, setSelectedDocumentId] = useState(content.documents[0].id);
   const [query, setQuery] = useState(content.documents[0].questions[0]);
@@ -323,7 +327,7 @@ export function RagShowcaseExperience({ content }: RagShowcaseExperienceProps) {
                 {content.closeLabel}
               </button>
             </div>
-            <iframe title={selectedDocument.title} src={selectedDocument.pdfHref} />
+            <iframe title={selectedDocument.title} src={getPdfPreviewHref(selectedDocument.pdfHref)} />
           </div>
         </div>
       ) : null}

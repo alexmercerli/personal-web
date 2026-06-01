@@ -3,8 +3,7 @@ export type Locale = "zh" | "en";
 const sharedLinks = {
   resume: "/resume.pdf",
   email: "13717322326@163.com",
-  linkedin: "#TODO-linkedin",
-  github: "#TODO-github"
+  linkedin: "https://www.linkedin.com/in/yicheng-li-716850339/"
 } as const;
 
 export const content = {
@@ -37,17 +36,23 @@ export const content = {
       directionLabel: "Current Direction",
       planetNote: "连接具体业务、AI工作流和制造现场，面向可验证、可交付、可使用的工业 AI 实践。"
     },
+    mobileTabs: [
+      { label: "关于我", href: "#about", icon: "person" },
+      { label: "工作经验", href: "#ground", icon: "experience" },
+      { label: "AI实验室", href: "/zh/rag-showcase/", icon: "lab" },
+      { label: "工作之外", href: "#beyond-work", icon: "life" }
+    ],
     links: sharedLinks,
     sectionEyebrows: {
-      about: "01",
-      education: "02",
-      ground: "03",
-      data: "04",
-      projects: "05",
-      lab: "06",
-      capability: "07",
-      career: "09",
-      contact: "10"
+      about: "",
+      education: "",
+      ground: "",
+      data: "",
+      projects: "",
+      lab: "",
+      capability: "",
+      career: "",
+      contact: ""
     },
     about: {
       title: "About / 关于我",
@@ -56,7 +61,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / 工作之外",
-      eyebrow: "08",
+      eyebrow: "",
       text: "我是一个爱好广泛，乐于分享和高能量的人。工作之外，我喜欢看电影、小说、徒步，也是一个科幻和音乐爱好者。我相信把点连成面的力量，做自己的长期主义者。",
       quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
@@ -155,7 +160,7 @@ export const content = {
           backEyebrow: "ACCESS NOTE",
           hint: "点击翻面",
           backTitle: "联系作者获取 demo",
-          backText: "由于涉及真实制造现场流程与测试逻辑，demo 可在沟通后单独展示。",
+          backText: "由于涉及业务流程与测试逻辑，demo 可在沟通后单独展示。",
           cta: "Email Me"
         }
       },
@@ -213,17 +218,17 @@ export const content = {
     education: [
       ["清华大学", "工程管理，工业工程系，2025.09 至今；GPA 3.9 / 4.0，核心课程：运筹学、战略管理、系统工程、人力资源管理、机器学习"],
       ["深圳大学", "机械设计制造及其自动化（机器人方向），本科，2018.09 - 2022.06；核心课程：机械设计、机器视觉、机器学习、嵌入式系统"],
-      ["OTH Regensburg", "德国雷根斯堡应用技术大学机械工程系，国际交换生，2019.03 - 2019.04"]
+      ["德国雷根斯堡应用技术大学", "机械工程系，国际交换生，2019.03 - 2019.04"]
     ],
     career: {
       title: "Career Direction / 职业方向",
-      text: "我的下一阶段目标，是从制造现场，走向 AI 产品经理或制造业 AI 项目经理的岗位。我希望参与那些真正进入业务流程的 AI 项目：改善质量、提升效率、降低风险，并为业务带来实际价值。",
+      text: "我的下一阶段目标，是从生产一线，走向 AI 产品经理或制造业 AI 项目经理的岗位。我希望参与那些真正进入业务流程的 AI 项目：改善质量、提升效率、降低风险，并为业务带来实际价值。",
       roles: ["AI 产品经理", "AI 项目经理", "工业数字化项目经理", "AI 售前/解决方案工程师","FDE 前沿部署工程师"]
     },
     contact: {
       title: "Contact / 联系方式",
       text: "我正在寻找 AI 产品经理、制造业 AI 项目经理、工业数字化和自动化解决方案相关机会。如果你关注制造业 AI、医疗器械数字化、工业数据应用或 AI Agent 工作流，欢迎联系我。",
-      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"],
+      buttons: ["下载简历", "Email Me", "LinkedIn"],
       emailDialog: {
         title: "Email",
         hint: "请给我发送邮件，我会快速回复你。",
@@ -262,17 +267,23 @@ export const content = {
       directionLabel: "Current Direction",
       planetNote: "Connecting concrete business needs, AI workflows, and manufacturing sites for verifiable, deliverable, usable industrial AI practice."
     },
+    mobileTabs: [
+      { label: "About", href: "#about", icon: "person" },
+      { label: "Experience", href: "#ground", icon: "experience" },
+      { label: "AI Lab", href: "/en/rag-showcase/", icon: "lab" },
+      { label: "Beyond", href: "#beyond-work", icon: "life" }
+    ],
     links: sharedLinks,
     sectionEyebrows: {
-      about: "01",
-      education: "02",
-      ground: "03",
-      data: "04",
-      projects: "05",
-      lab: "06",
-      capability: "07",
-      career: "09",
-      contact: "10"
+      about: "",
+      education: "",
+      ground: "",
+      data: "",
+      projects: "",
+      lab: "",
+      capability: "",
+      career: "",
+      contact: ""
     },
     about: {
       title: "About / About Me",
@@ -281,7 +292,7 @@ export const content = {
     },
     beyondWork: {
       title: "Beyond Work / Personal Layer",
-      eyebrow: "08",
+      eyebrow: "",
       text: "I’m a person with diverse interests who loves to share and is full of energy. Outside of work, I enjoy watching movies, reading novels, and hiking, and I’m also a fan of science fiction and music. I believe in the power of connecting the dots and am committed to a long-term perspective.",
       quoteLabel: "Recent quote",
       quote: "Showing up is 80 percent of success.",
@@ -448,7 +459,7 @@ export const content = {
     contact: {
       title: "Contact / 联系方式",
       text: "I am open to opportunities in AI product management, industrial AI project management, manufacturing digitalization, and automation solutions. I am especially interested in applying AI to real manufacturing workflows and medical device production systems.",
-      buttons: ["Download Resume", "Email Me", "LinkedIn", "GitHub"],
+      buttons: ["Download Resume", "Email Me", "LinkedIn"],
       emailDialog: {
         title: "Email",
         hint: "Send me an email and I will reply soon.",

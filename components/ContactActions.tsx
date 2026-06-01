@@ -8,7 +8,6 @@ type ContactActionsProps = {
     resume: string;
     email: string;
     linkedin: string;
-    github: string;
   };
   dialog: {
     title: string;
@@ -71,9 +70,6 @@ export function ContactActions({ labels, links, dialog }: ContactActionsProps) {
         </button>
         <a className="soft-button" href={links.linkedin}>
           {labels[2]}
-        </a>
-        <a className="soft-button" href={links.github}>
-          {labels[3]}
         </a>
       </div>
 

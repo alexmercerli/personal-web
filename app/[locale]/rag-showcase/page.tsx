@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { RagShowcaseExperience } from "@/components/RagShowcaseExperience";
 import { content, type Locale } from "@/lib/content";
@@ -52,6 +53,9 @@ export default async function RagShowcasePage({ params }: PageProps) {
         navPrefix={`/${lang}`}
       />
       <main className="rag-main">
+        <Link className="rag-back-link" href={`/${lang}`}>
+          {lang === "zh" ? "返回主页" : "Back to Home"}
+        </Link>
         <RagShowcaseExperience content={ragShowcase[lang]} />
       </main>
     </>

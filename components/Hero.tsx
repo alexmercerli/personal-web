@@ -44,7 +44,7 @@ export function Hero({ hero, links, tags }: HeroProps) {
           <RichText text={hero.body} />
         </p>
         <div className="action-row">
-          <a className="dark-button" href="#projects">
+          <a className="dark-button hero-primary-button" href="#projects">
             {hero.primary}
           </a>
           <a className="soft-button" href={links.resume}>
