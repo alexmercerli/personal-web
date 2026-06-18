@@ -1,8 +1,9 @@
-import { KnowledgePlanet } from "@/components/KnowledgePlanet";
+import { DesktopKnowledgePlanet } from "@/components/DesktopKnowledgePlanet";
 import { RichText } from "@/components/RichText";
 import type { PlanetTag } from "@/lib/planetTags";
 
 type HeroProps = {
+  locale: "zh" | "en";
   hero: {
     eyebrow: string;
     titleLines: readonly string[];
@@ -22,12 +23,12 @@ type HeroProps = {
   tags: PlanetTag[];
 };
 
-export function Hero({ hero, links, tags }: HeroProps) {
+export function Hero({ locale, hero, links, tags }: HeroProps) {
   return (
     <section className="hero-section" id="portfolio">
       <div className="hero-copy">
         <p className="eyebrow">{hero.eyebrow}</p>
-        <h1>
+        <h1 className={locale === "en" ? "hero-title-en" : undefined}>
           <span className="hero-title-main">
             {hero.titleLines.map((line) => (
               <span className="hero-title-line" key={line}>
@@ -59,13 +60,8 @@ export function Hero({ hero, links, tags }: HeroProps) {
       <div className="planet-window">
         <div className="window-bar">
           <strong>{hero.planetTitle}</strong>
-          <span>
-            <i />
-            <i />
-            <i />
-          </span>
         </div>
-        <KnowledgePlanet tags={tags} />
+        <DesktopKnowledgePlanet tags={tags} />
         <aside className="direction-note">
           <strong>{hero.directionLabel}</strong>
           <p>{hero.planetNote}</p>

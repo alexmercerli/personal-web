@@ -86,10 +86,10 @@ export default async function LocalePage({ params }: PageProps) {
     <>
       <Header locale={lang} brand={t.brand} nav={t.nav} links={t.links} />
       <main>
-        <Hero hero={t.hero} links={t.links} tags={planetTags} />
+        <Hero locale={lang} hero={t.hero} links={t.links} tags={planetTags} />
         <MobileTabBar tabs={t.mobileTabs} />
 
-        <section className="studio-section identity-section" id="about">
+        <section className="studio-section plain-section identity-section" id="about">
           <SectionHeading title={t.about.title} eyebrow={t.sectionEyebrows.about} />
           <div>
             <p>
@@ -103,7 +103,7 @@ export default async function LocalePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className={`studio-section education-section education-section-${lang}`}>
+        <section className={`studio-section plain-section education-section education-section-${lang}`}>
           <SectionHeading title={t.educationTitle} eyebrow={t.sectionEyebrows.education} />
           <div className="timeline">
             {t.education.map(([school, detail]) => {
@@ -141,7 +141,7 @@ export default async function LocalePage({ params }: PageProps) {
                 height={112}
                 unoptimized
               />
-              <span>西门子医疗</span>
+              <span>{lang === "zh" ? "西门子医疗" : "Siemens Healthineers"}</span>
             </div>
             <p>
               <RichText text={t.ground.text} />
@@ -170,7 +170,7 @@ export default async function LocalePage({ params }: PageProps) {
           </article>
         </section>
 
-        <section className="studio-section" id="projects">
+        <section className="studio-section plain-section projects-section" id="projects">
           <SectionHeading title={t.projectsTitle} eyebrow={t.sectionEyebrows.projects} />
           <div className="projects-grid">
             {t.projects.map((project, index) => (
@@ -179,8 +179,8 @@ export default async function LocalePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="lab-section">
-          <article className="studio-section lab-copy" id="lab">
+        <section className="studio-section rag-feature-section" id="lab">
+          <div className="rag-feature-copy">
             <SectionHeading title={t.lab.title} eyebrow={t.sectionEyebrows.lab} />
             <p>
               <RichText text={t.lab.text} />
@@ -190,36 +190,46 @@ export default async function LocalePage({ params }: PageProps) {
                 <span key={item}>{item}</span>
               ))}
             </div>
-            <div className="workflow-teaser lab-workflow-teaser">
-              <div>
-                {t.ragTeaser.eyebrow ? <p>{t.ragTeaser.eyebrow}</p> : null}
-                <h3>{t.ragTeaser.title}</h3>
-                <span>{t.ragTeaser.text}</span>
-              </div>
+          </div>
+
+          <div className="rag-feature-visual">
+            <p className="rag-feature-eyebrow">{t.ragTeaser.eyebrow}</p>
+            <h3>{t.ragTeaser.title}</h3>
+            <p className="rag-feature-description">{t.ragTeaser.text}</p>
+            <div className="rag-flow-preview" aria-label={t.ragTeaser.title}>
+              {t.ragTeaser.flow.map((step, index) => (
+                <div className="rag-flow-step" key={step}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{step}</strong>
+                </div>
+              ))}
+            </div>
+            <div className="rag-feature-footer">
+              <p>{t.ragTeaser.note}</p>
               <Link className="dark-button" href={`/${lang}/rag-showcase`}>
                 {t.ragTeaser.cta}
               </Link>
             </div>
-          </article>
+          </div>
+        </section>
 
-          <article className="studio-section" id="capability">
-            <SectionHeading title={t.capabilityTitle} eyebrow={t.sectionEyebrows.capability} />
-            <div className="capability-board">
-              {t.capabilities.map(([title, body]) => (
-                <section key={title}>
-                  <h3>{title}</h3>
-                  <p>
-                    <RichText text={body} />
-                  </p>
-                </section>
-              ))}
-            </div>
-          </article>
+        <section className="studio-section plain-section capability-section" id="capability">
+          <SectionHeading title={t.capabilityTitle} eyebrow={t.sectionEyebrows.capability} />
+          <div className="capability-board">
+            {t.capabilities.map(([title, body]) => (
+              <section key={title}>
+                <h3>{title}</h3>
+                <p>
+                  <RichText text={body} />
+                </p>
+              </section>
+            ))}
+          </div>
         </section>
 
         <BeyondWork content={t.beyondWork} />
 
-        <section className="studio-section career-section">
+        <section className="studio-section plain-section career-section">
           <SectionHeading title={t.career.title} eyebrow={t.sectionEyebrows.career} />
           <p>
             <RichText text={t.career.text} />

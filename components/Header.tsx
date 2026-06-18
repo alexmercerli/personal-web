@@ -45,10 +45,8 @@ export function Header({ locale, brand, nav, links, localeHref, navPrefix = "" }
       <nav className="desktop-nav" aria-label="Main navigation">
         <a href={`${navPrefix}#about`}>{nav.about}</a>
         <a href={`${navPrefix}#ground`}>{nav.ground}</a>
-        <a href={`${navPrefix}#data`}>{nav.data}</a>
         <a href={`${navPrefix}#projects`}>{nav.projects}</a>
         <a href={`${navPrefix}#lab`}>{nav.lab}</a>
-        <a href={`${navPrefix}#portfolio`}>{nav.portfolio}</a>
         <a href={`${navPrefix}#contact`}>{nav.contact}</a>
       </nav>
 

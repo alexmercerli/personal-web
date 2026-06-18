@@ -25,10 +25,10 @@ export const content = {
     },
     hero: {
       eyebrow: "Personal Knowledge Studio",
-      titleLines: ["李奕成 Mercer", "个人主页"],
-      titleAlt: "Yicheng Li / Mercer — AI Portfolio",
-      lead: "一个从磁共振精密制造现场出发的工艺工程师。",
-      body: "**我正在寻求向AI 产品经理，AI 项目经理方向转型，关注 AI 如何提高生产力、改善质量并赋能业务。**",
+      titleLines: ["李奕成 Mercer", "工业 AI 作品集"],
+      titleAlt: "Yicheng Li / Mercer — Industrial AI Portfolio",
+      lead: "从磁共振精密制造现场出发，连接工艺工程、自动化测试与 AI 产品实践。",
+      body: "**面向 AI 产品经理与制造业 AI 项目经理方向，关注 AI 如何进入生产、质量与工程交付流程。**",
       primary: "查看作品集",
       secondary: "下载简历",
       tertiary: "联系我",
@@ -66,8 +66,8 @@ export const content = {
       quoteLabel: "最近很喜欢的一句话",
       quote: "到场是成功的八成。",
       portrait: {
-        src: "/images/beyond-work/life-photo.jpg",
-        alt: "生活照占位图"
+        src: "/images/beyond-work/life-photo.webp",
+        alt: "李奕成生活照"
       },
       interests: [
         {
@@ -93,9 +93,9 @@ export const content = {
           description: "在徒步里体会自然",
           items: ["保持好的身体状态", "保持对自然的热爱", "把点连成线"],
           images: [
-            { src: "/images/beyond-work/hiking-01.jpg", alt: "徒步照片占位图 1" },
-            { src: "/images/beyond-work/hiking-02.jpg", alt: "徒步照片占位图 2" },
-            { src: "/images/beyond-work/hiking-03.jpg", alt: "徒步照片占位图 3" }
+            { src: "/images/beyond-work/hiking-01.webp", alt: "徒步照片 1" },
+            { src: "/images/beyond-work/hiking-02.webp", alt: "徒步照片 2" },
+            { src: "/images/beyond-work/hiking-03.webp", alt: "徒步照片 3" }
           ]
         },
         {
@@ -133,10 +133,12 @@ export const content = {
       cta: "Launch Experience"
     },
     ragTeaser: {
-      eyebrow: "",
+      eyebrow: "CENTERPIECE PROJECT",
       title: "基于RAG的企业知识库搭建",
       text: "一个企业知识库的真实Demo演示：选择私有文档/数据，提出问题，可视化RAG（检索增强生成）的流程，并且演示如何将生成的上下文和Prompt输入给LLM。",
-      cta: "打开Demo演示"
+      cta: "体验交互式 Demo",
+      flow: ["文档库", "切片与向量化", "召回与重排", "LLM 上下文"],
+      note: "检索结果可追溯，回答前保留人工确认。"
     },
     projectLabels: {
       context: "项目背景",
@@ -256,10 +258,10 @@ export const content = {
     },
     hero: {
       eyebrow: "Personal Knowledge Studio",
-      titleLines: ["Yicheng Li / Mercer", "Personal Homepage"],
-      titleAlt: "李奕成 Mercer｜个人主页",
-      lead: "A process engineer shaped by precision MRI manufacturing.",
-      body: "**I am seeking to transition toward AI Product Manager and AI Project Manager roles, with a focus on how AI can improve productivity, quality, and business enablement.**",
+      titleLines: ["Yicheng Li / Mercer", "Industrial AI Portfolio"],
+      titleAlt: "李奕成 Mercer｜工业 AI 作品集",
+      lead: "From precision MRI manufacturing to process engineering, automation testing, and AI product practice.",
+      body: "**Moving toward AI Product and Industrial AI Project roles, with a focus on bringing AI into production, quality, and engineering delivery workflows.**",
       primary: "View Portfolio",
       secondary: "Download Resume",
       tertiary: "Contact",
@@ -297,8 +299,8 @@ export const content = {
       quoteLabel: "Recent quote",
       quote: "Showing up is 80 percent of success.",
       portrait: {
-        src: "/images/beyond-work/life-photo.jpg",
-        alt: "Life photo placeholder"
+        src: "/images/beyond-work/life-photo.webp",
+        alt: "Portrait of Yicheng Li"
       },
       interests: [
         {
@@ -324,9 +326,9 @@ export const content = {
           description: "Experience nature on a hike",
           items: ["Keep Healthy", "Observing Nature", "Connect the dots"],
           images: [
-            { src: "/images/beyond-work/hiking-01.jpg", alt: "Hiking photo placeholder 1" },
-            { src: "/images/beyond-work/hiking-02.jpg", alt: "Hiking photo placeholder 2" },
-            { src: "/images/beyond-work/hiking-03.jpg", alt: "Hiking photo placeholder 3" }
+            { src: "/images/beyond-work/hiking-01.webp", alt: "Hiking photo 1" },
+            { src: "/images/beyond-work/hiking-02.webp", alt: "Hiking photo 2" },
+            { src: "/images/beyond-work/hiking-03.webp", alt: "Hiking photo 3" }
           ]
         },
         {
@@ -364,10 +366,12 @@ export const content = {
       cta: "Launch Experience"
     },
     ragTeaser: {
-      eyebrow: "",
+      eyebrow: "CENTERPIECE PROJECT",
       title: "Enterprise Knowledge Base Built with RAG",
       text: "A real demo of an enterprise knowledge base: select private documents/data, ask questions, visualize the RAG (retrieval-augmented generation) workflow, and see how the generated context and prompt are passed into an LLM.",
-      cta: "Open Demo"
+      cta: "Try Interactive Demo",
+      flow: ["Document Library", "Chunk & Embed", "Retrieve & Rerank", "LLM Context"],
+      note: "Retrieval remains traceable, with human review before the final answer."
     },
     projectLabels: {
       context: "Context",

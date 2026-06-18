@@ -43,11 +43,17 @@ export function BeyondWork({ content }: BeyondWorkProps) {
   const previewImages = active.images?.length ? active.images : [content.portrait];
 
   return (
-    <section className="studio-section beyond-work-section" id="beyond-work">
+    <section className="studio-section plain-section beyond-work-section" id="beyond-work">
       <SectionHeading title={content.title} eyebrow={content.eyebrow} />
       <div className="beyond-work-grid">
         <figure className="beyond-portrait">
-          <Image src={content.portrait.src} alt={content.portrait.alt} width={960} height={1200} unoptimized />
+          <Image
+            src={content.portrait.src}
+            alt={content.portrait.alt}
+            width={1600}
+            height={1200}
+            sizes="(max-width: 680px) calc(100vw - 68px), (max-width: 1180px) calc(100vw - 104px), 380px"
+          />
         </figure>
 
         <div className="beyond-copy">
@@ -92,7 +98,14 @@ export function BeyondWork({ content }: BeyondWorkProps) {
 
             <div className={`interest-images count-${previewImages.length}`}>
               {previewImages.map((image) => (
-                <Image src={image.src} alt={image.alt} width={1200} height={760} unoptimized key={image.src} />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={1600}
+                  height={1200}
+                  sizes="(max-width: 680px) calc(100vw - 68px), (max-width: 1180px) calc(100vw - 104px), 360px"
+                  key={image.src}
+                />
               ))}
             </div>
           </article>

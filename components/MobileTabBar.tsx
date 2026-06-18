@@ -56,11 +56,45 @@ const icons = {
 
 export function MobileTabBar({ tabs }: MobileTabBarProps) {
   const [hidden, setHidden] = useState(false);
+  const [activeIcon, setActiveIcon] = useState<MobileTab["icon"]>(tabs[0]?.icon ?? "person");
   const lastScrollY = useRef(0);
   const idleTimer = useRef<number | null>(null);
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
+    const sectionIdByIcon: Partial<Record<MobileTab["icon"], string>> = {
+      person: "about",
+      experience: "ground",
+      projects: "projects",
+      lab: "lab",
+      life: "beyond-work"
+    };
+
+    const updateActiveSection = () => {
+      const marker = window.innerHeight * 0.38;
+      let nextActive = tabs[0]?.icon ?? "person";
+
+      tabs.forEach((tab) => {
+        const sectionId = sectionIdByIcon[tab.icon];
+        const section = sectionId ? document.getElementById(sectionId) : null;
+        if (section && section.getBoundingClientRect().top <= marker) {
+          nextActive = tab.icon;
+        }
+      });
+
+      setActiveIcon(nextActive);
+    };
+
+    const updateFromHash = () => {
+      const targetId = window.location.hash.slice(1);
+      const matchingTab = tabs.find((tab) => sectionIdByIcon[tab.icon] === targetId);
+
+      if (matchingTab) {
+        setActiveIcon(matchingTab.icon);
+      } else {
+        updateActiveSection();
+      }
+    };
 
     const showWhenIdle = () => {
       if (idleTimer.current) {
@@ -75,6 +109,7 @@ export function MobileTabBar({ tabs }: MobileTabBarProps) {
     const onScroll = () => {
       const currentY = window.scrollY;
       const delta = currentY - lastScrollY.current;
+      updateActiveSection();
 
       if (currentY < 24 || delta < -4) {
         setHidden(false);
@@ -87,19 +122,31 @@ export function MobileTabBar({ tabs }: MobileTabBarProps) {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("hashchange", updateFromHash);
+    window.addEventListener("resize", updateActiveSection);
+    const syncTimer = window.setTimeout(updateFromHash, 350);
+    updateFromHash();
 
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", updateFromHash);
+      window.removeEventListener("resize", updateActiveSection);
+      window.clearTimeout(syncTimer);
       if (idleTimer.current) {
         window.clearTimeout(idleTimer.current);
       }
     };
-  }, []);
+  }, [tabs]);
 
   return (
     <nav className={hidden ? "mobile-tab-bar is-hidden" : "mobile-tab-bar"} aria-label="Mobile portfolio navigation">
       {tabs.map((tab) => (
-        <a href={tab.href} key={tab.href}>
+        <a
+          className={tab.icon === activeIcon ? "active" : undefined}
+          href={tab.href}
+          key={tab.label}
+          aria-current={tab.icon === activeIcon ? "location" : undefined}
+        >
           <span className="mobile-tab-icon">{icons[tab.icon]}</span>
           <span>
             <strong>{tab.label}</strong>
