@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="城市配送无人机整机 EOL 测试与质量数据闭环概念演示"
+    />
+    <title>UAV EOL Quality Loop · Concept Demo</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <nav class="side-nav" aria-label="看板主导航">
+        <div class="brand" aria-label="UAV EOL Quality Loop">
+          <span class="brand-mark" aria-hidden="true">U</span>
+          <strong>UAV</strong>
+        </div>
+        <div class="nav-items">
+          <button class="nav-button" type="button" data-route="#overview">
+            <span class="nav-icon" aria-hidden="true">▦</span>
+            <span>总览</span>
+          </button>
+          <button class="nav-button" type="button" data-route="#failures">
+            <span class="nav-icon" aria-hidden="true">≣</span>
+            <span>失效</span>
+          </button>
+          <button class="nav-button" type="button" data-route="#trace">
+            <span class="nav-icon" aria-hidden="true">⌕</span>
+            <span>追溯</span>
+          </button>
+        </div>
+        <button
+          class="nav-button metrics-button"
+          type="button"
+          id="metrics-button"
+          aria-label="查看指标口径"
+        >
+          <span class="nav-icon" aria-hidden="true">ⓘ</span>
+          <span>口径</span>
+        </button>
+      </nav>
+
+      <div class="app-frame">
+        <header class="topbar">
+          <div class="page-heading">
+            <h1 id="page-title">生产质量总览</h1>
+            <span id="generation-time">数据生成：DEMO-DAY-10 13:45</span>
+          </div>
+
+          <form class="global-filters" id="global-filters" aria-label="全局筛选">
+            <div class="filter-control filter-control-day">
+              <label for="day-filter">时间范围</label>
+              <select id="day-filter" name="day">
+                <option value="all">演示周期 Day 1–10</option>
+                <option value="DEMO-DAY-01">Day 1</option>
+                <option value="DEMO-DAY-02">Day 2</option>
+                <option value="DEMO-DAY-03">Day 3</option>
+                <option value="DEMO-DAY-04">Day 4</option>
+                <option value="DEMO-DAY-05">Day 5</option>
+                <option value="DEMO-DAY-06">Day 6</option>
+                <option value="DEMO-DAY-07">Day 7</option>
+                <option value="DEMO-DAY-08">Day 8</option>
+                <option value="DEMO-DAY-09">Day 9</option>
+                <option value="DEMO-DAY-10">Day 10</option>
+              </select>
+            </div>
+            <div class="filter-control filter-control-compact">
+              <label for="batch-filter">批次</label>
+              <select id="batch-filter" name="batch">
+                <option value="all">全部批次</option>
+                <option value="Batch A">Batch A</option>
+                <option value="Batch B">Batch B</option>
+                <option value="Batch C">Batch C</option>
+              </select>
+            </div>
+            <div class="filter-control filter-control-compact">
+              <label for="station-filter">EOL 工站</label>
+              <select id="station-filter" name="station">
+                <option value="all">全部工站</option>
+                <option value="EOL-01">EOL-01</option>
+                <option value="EOL-02">EOL-02</option>
+              </select>
+            </div>
+          </form>
+
+          <aside class="simulation-label" aria-label="数据事实边界">
+            <strong>模拟数据 · Concept Demo</strong>
+            <span>不代表任何企业实际质量水平</span>
+          </aside>
+        </header>
+
+        <main id="app-main" tabindex="-1">
+          <section id="overview-view" class="view" aria-labelledby="page-title"></section>
+          <section id="failures-view" class="view" aria-labelledby="page-title" hidden></section>
+          <section id="trace-view" class="view" aria-labelledby="page-title" hidden>
+            <form id="sn-search-form" class="sn-search" role="search">
+              <label for="sn-search-input">整机 SN</label>
+              <div class="search-row">
+                <input
+                  id="sn-search-input"
+                  name="sn"
+                  type="search"
+                  autocomplete="off"
+                  value="DEMO-UAV-0086"
+                />
+                <button type="submit" class="button button-primary">查询</button>
+              </div>
+            </form>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="metrics-dialog" aria-labelledby="metrics-dialog-title">
+      <div class="dialog-header">
+        <h2 id="metrics-dialog-title">指标口径</h2>
+        <button type="button" class="icon-button" id="metrics-close" aria-label="关闭指标口径">×</button>
+      </div>
+      <dl class="metrics-definitions">
+        <div><dt>FPY</dt><dd>首次 EOL 即通过的唯一 SN / 投入测试唯一 SN。</dd></div>
+        <div><dt>复测率</dt><dd>存在第二次测试记录的唯一 SN / 投入测试唯一 SN。</dd></div>
+        <div><dt>P95 节拍</dt><dd>首次完整 EOL 测试时长的第 95 百分位。</dd></div>
+      </dl>
+      <p class="limit-note">判定限值为演示假设，真实值需由研发规格、DVP、法规要求与历史能力共同确认。</p>
+    </dialog>
+
+    <script type="module" src="./app.mjs?v=20260711-3"></script>
+  </body>
+</html>

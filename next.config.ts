@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         source: "/ai-pmo/:path*",
         destination: "/ai-pmo/index.html",
       },
+      {
+        source: "/uav-test-showcase/:path*",
+        destination: "/uav-test-showcase/index.html",
+      },
     ];
   },
 };
